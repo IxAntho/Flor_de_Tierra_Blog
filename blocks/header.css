@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+  background: transparent url("../images/header-example-image.png") no-repeat
+    center;
+  background-size: contain;
+}
+
+.header__overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: cover;
+}
+
+.header__social {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 551px;
+  width: 100%;
+}
