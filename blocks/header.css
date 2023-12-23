@@ -1,21 +1,94 @@
 .header {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 1440px;
   width: 100%;
+  max-height: 828px;
+  height: 100%;
   background: transparent url("../images/header-example-image.png") no-repeat
     center;
-  background-size: contain;
+  background-size: cover;
+  color: #fff;
 }
 
 .header__overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.3);
   background-size: cover;
+  width: inherit;
 }
 
 .header__social {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 551px;
+  margin: 15px auto;
+  max-width: 1232px;
   width: 100%;
+}
+
+.header__wrapper {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content;
+  column-gap: 3px;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.header__contact {
+  font-family: "Mulish", "Arial", "Helvetica", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: left;
+  margin: 0;
+}
+
+.header__social-media {
+  display: flex;
+  max-width: 100px;
+  width: 100%;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header__social-icon {
+  max-width: 20px;
+  width: 100%;
+  max-height: 20px;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.header__social-icon_instagram {
+  max-width: 16px;
+  max-height: 16px;
+}
+
+.header__description {
+  max-width: 764px;
+  width: 100%;
+  margin: 119px auto 70px auto;
+}
+
+.header__heading {
+  font-family: "Prompt", "Arial", "Helvetica", sans-serif;
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.header__paragraph {
+  font-family: "Mulish", "Arial", "Helvetica", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+  color: #cccccc;
 }

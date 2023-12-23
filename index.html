@@ -35,78 +35,96 @@
       <div class="header__overlay">
         <div class="header__social">
           <div class="header__wrapper">
-            <p class="header__info">
-              <span class="header__icon-location"></span>
-              Segunda calle, callejón 2, 2-40 zona 2 San Pedro Sacatepéquez, San
-              Marcos 12002 Guatemala
-            </p>
+            <img
+              class="header__icon-location"
+              src="./images/location-icon.svg"
+              alt="Location icon"
+            />
             <p class="header__contact">
-              <span class="header__icon-phone"></span>
-              +(502) 4110 7236
+              2-40 zona 2, San Pedro Sacatepéquez, San Marcos, Guatemala
             </p>
-            <p class="header__contact">
-              <span class="header__icon-mail"></span>
-              flordetierra.agricola@gmail.com
-            </p>
+          </div>
+          <div class="header__wrapper">
+            <img
+              class="header__icon-phone"
+              src="./images/phone-icon.svg"
+              alt="Phone icon"
+            />
+            <p class="header__contact">+(502) 4110 7236</p>
+          </div>
+          <div class="header__wrapper">
+            <img
+              class="header__icon-mail"
+              src="./images/mail-icon.svg"
+              alt="Mail icon"
+            />
+            <p class="header__contact">flordetierra.agricola@gmail.com</p>
           </div>
           <div class="header__social-media">
-            <img
-              class="header__social-media_facebook"
-              src="./images/fb-icon.svg"
-              alt="Facebook icon"
-            />
-            <img
-              class="header__social-media_instagram"
-              src="./images/ig-icon.svg"
-              alt="Instagram icon"
-            />
-            <img
-              class="header__social-media_whatsapp"
-              src="./images/wp-icon.svg"
-              alt="Whatsapp icon"
-            />
+            <a
+              class="header__social-icon"
+              href="https://www.facebook.com/Flordetierraguate/"
+              target="_blank"
+            >
+              <img src="./images/fb-icon.svg" alt="Facebook icon" />
+            </a>
+
+            <a
+              class="header__social-icon header__social-icon_instagram"
+              href="https://www.instagram.com/flordetierraguatemala/"
+              target="_blank"
+            >
+              <img src="./images/ig-icon.svg" alt="Instagram icon" />
+            </a>
+            <a
+              class="header__social-icon"
+              href="https://api.whatsapp.com/send?phone=%2B50253385566&data=ARCaVYlDGw0mYKcXjWpYH3ax_sSi8VK4Kz0Yqu5Rx6HoFZD-PmRuTV88HJ9m9lRWstVXP-VkgFG7XxLAhXUhoscUOJqSv0D-KKOhTcRoThRNbHNZ00iInSlU4UvadIQXq9TN9t-28V-EjRJVxAa_v76MFw&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR18dL6k9aeWrLe0hVGow8MmPYeIOc3daEkP5Wg-KbqY-1ruIShobO9DsUM"
+              target="_blank"
+            >
+              <img src="./images/wp-icon.svg" alt="Whatsapp icon" />
+            </a>
           </div>
         </div>
-      </div>
-      <nav class="header__nav">
-        <img
-          class="header__nav-logo"
-          src="./images/FdT.png"
-          alt="Flor de Tierra logo"
-        />
-        <ul class="header__nav-links">
-          <li>
-            <a class="header__nav-link" href="#">Inicio</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Nosotros</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Servicios</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Equipo</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Preguntas Frecuentes</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Contactanos</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__description">
-        <h1 class="header__heading">Bienvenidos a Flor De Tierra</h1>
-        <p class="header__paragraph">
-          Somos una iniciativa pionera en la generación de servicios y productos
-          agropecuarios biológicos, de alta calidad y amigables con el
-          ecosistema.
-        </p>
-      </div>
-      <div class="header__buttons">
-        <button class="header__about-button">Conoce más</button>
-        <button class="header__contact-button">Contactanos</button>
-        <button class="header__narrow-button"></button>
+        <nav class="nav">
+          <img
+            class="nav__logo"
+            src="./images/FdT.png"
+            alt="Flor de Tierra logo"
+          />
+          <ul class="nav__links">
+            <li class="nav__links-item">
+              <a class="nav__link nav__link_fixed" href="#">Inicio</a>
+            </li>
+            <li class="nav__links-item">
+              <a class="nav__link" href="#">Nosotros</a>
+            </li>
+            <li class="nav__links-item">
+              <a class="nav__link" href="#">Servicios</a>
+            </li>
+            <li class="nav__links-item">
+              <a class="nav__link" href="#">Equipo</a>
+            </li>
+            <li class="nav__links-item">
+              <a class="nav__link" href="#">PMF</a>
+            </li>
+            <li class="nav__links-item">
+              <a class="nav__link" href="#">Contactanos</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__description">
+          <h1 class="header__heading">Bienvenidos a Flor De Tierra</h1>
+          <p class="header__paragraph">
+            Somos una iniciativa pionera en la generación de servicios y
+            productos agropecuarios biológicos, de alta calidad y amigables con
+            el ecosistema.
+          </p>
+        </div>
+        <div class="header__buttons">
+          <button class="header__about-button">Conoce más</button>
+          <button class="header__contact-button">Contactanos</button>
+          <button class="header__narrow-button"></button>
+        </div>
       </div>
     </header>
   </body>
