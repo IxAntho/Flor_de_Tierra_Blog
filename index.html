@@ -93,7 +93,11 @@
           />
           <ul class="nav__links">
             <li class="nav__links-item">
-              <a class="nav__link nav__link_fixed" href="#">Inicio</a>
+              <a
+                class="nav__link nav__link_fixed"
+                onclick="scrollToSection('home')"
+                >Inicio</a
+              >
             </li>
             <li class="nav__links-item">
               <a class="nav__link" href="#">Nosotros</a>
@@ -127,11 +131,60 @@
           <button class="header__button header__button_contact">
             Contactanos
           </button>
-          <button class="header__button header__button_narrow">
+          <button
+            class="header__button header__button_narrow"
+            onclick="scrollToSection('home')"
+          >
             <img src="./images/narrow-icon.svg" alt="Narrow icon" />
           </button>
         </div>
       </div>
     </header>
+    <main class="main">
+      <section class="features" id="home">
+        <div class="features__card features__card_color_blue">
+          <img
+            class="features__image"
+            src="./images/blue-world.svg"
+            alt="World icon"
+          />
+          <h2 class="features__heading">
+            La Agricultura Orgánica en Guatemala
+          </h2>
+          <p class="features__description">
+            Conozca cómo Flor de Tierra está revolucionando la agricultura en
+            Guatemala, ofreciendo productos orgánicos de alta calidad y con
+            impacto positivo en el medio ambiente.
+          </p>
+        </div>
+        <div class="features__card features__card_color_beige">
+          <img
+            class="features__image"
+            src="./images/beige-check.svg"
+            alt="Check icon"
+          />
+          <h2 class="features__heading">Productos Orgánicos Reconocidos</h2>
+          <p class="features__description">
+            Nuestros productos están reconocidos por FIDA y respetan todos los
+            estándares de la agricultura orgánica.
+          </p>
+        </div>
+        <div class="features__card features__card_color_green">
+          <img
+            class="features__image"
+            src="./images/green-heart.svg"
+            alt="Heart icon"
+          />
+          <h2 class="features__heading">Impactando Vidas y Comunidades</h2>
+          <p class="features__description">
+            Estamos orgullosos de nuestro compromiso de ofrecer productos y
+            servicios agrícolas orgánicos, de alta calidad y respetuosos con el
+            medio ambiente, no solo fomentamos tierras más saludable sino que
+            también contribuimos a las comunidades locales.
+          </p>
+        </div>
+      </section>
+    </main>
   </body>
+  <script src="./script/index.js"></script>
 </html>

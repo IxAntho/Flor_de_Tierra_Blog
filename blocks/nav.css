@@ -47,4 +47,5 @@
 
 .nav__link:hover {
   color: #fff;
+  cursor: pointer;
 }
