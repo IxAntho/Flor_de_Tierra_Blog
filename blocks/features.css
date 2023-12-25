@@ -1,9 +1,11 @@
 .features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 380px);
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   column-gap: 30px;
-  margin: 180px 0 50px 0;
+  row-gap: 45px;
+  margin: 140px 0 75px 0;
+  padding-top: 43px;
   max-width: 1232px;
   width: 100%;
 }
