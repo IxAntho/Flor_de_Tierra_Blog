@@ -100,7 +100,9 @@
               >
             </li>
             <li class="nav__links-item">
-              <a class="nav__link" href="#">Nosotros</a>
+              <a class="nav__link" onclick="scrollToSection('about')"
+                >Nosotros</a
+              >
             </li>
             <li class="nav__links-item">
               <a class="nav__link" href="#">Servicios</a>
@@ -125,7 +127,10 @@
           </p>
         </div>
         <div class="header__buttons">
-          <button class="header__button header__button_about">
+          <button
+            class="header__button header__button_about"
+            onclick="scrollToSection('about')"
+          >
             Conoce más
           </button>
           <button class="header__button header__button_contact">
@@ -182,6 +187,68 @@
             medio ambiente, no solo fomentamos tierras más saludable sino que
             también contribuimos a las comunidades locales.
           </p>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <img class="about__image" src="./images/peaches.jpg" alt="Peaches" />
+        <div class="about__content">
+          <h2 class="about__heading">Nestra Misión</h2>
+          <p class="about__subheading">Flor de Tierra</p>
+          <p class="about__paragraph">
+            En FlorDeTierra, nos dedicamos a mejorar la calidad de los cultivos
+            y cuidar la salud de la tierra de Guatemala. A través de tecnología
+            de punta y nuestra profunda experiencia agrícola, nos esforzamos por
+            lograr transformaciones positivas en el campo de la agricultura.
+            Nuestra misión se extiende más allá de los campos y las granjas:
+            nuestro objetivo es fomentar un estilo de vida más saludable para
+            todos, armonizando el bienestar de las personas y el planeta.
+          </p>
+        </div>
+      </section>
+      <section class="services" id="services">
+        <h2 class="services__heading">Servicios de Agricultura Orgánica</h2>
+        <p class="services__paragraph">
+          Conozca nuestros servicios y cómo podemos mejorar su producción de
+          cultivos.
+        </p>
+        <div class="services__container">
+          <div class="services__card">
+            <img
+              class="services__image"
+              src="./images/implements1.jpg"
+              alt="Fertilizer's implements"
+            />
+            <p class="services__card-name">Implementos de calidad</p>
+            <p class="services__card-text">
+              Utilizamos los mejores y más modernos implementos para garantizar
+              una agricultura orgánica de calidad.
+            </p>
+          </div>
+          <div class="services__card">
+            <img
+              class="services__image"
+              src="./images/implements2.jpg"
+              alt="Fertilizer's implements"
+            />
+            <p class="services__card-name">Técnicas y métodos naturales</p>
+            <p class="services__card-text">
+              Nuestra filosofía es trabajar en armonía con la naturaleza,
+              utilizando métodos y técnicas naturales para obtener productos
+              orgánicos.
+            </p>
+          </div>
+          <div class="services__card">
+            <img
+              class="services__image"
+              src="./images/fortalece-tus-suelos.jpg"
+              alt="Fertilizer"
+            />
+            <p class="services__card-name">Fertilizantes orgánicos</p>
+            <p class="services__card-text">
+              Utilizamos fertilizantes naturales y compost para nutrir nuestros
+              cultivos y obtener productos más saludables y nutritivos.
+            </p>
+          </div>
         </div>
       </section>
     </main>

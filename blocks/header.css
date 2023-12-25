@@ -1,12 +1,24 @@
 @keyframes change {
   0% {
-    background-image: url(../images/header-example-image.png);
+    background-image: url(../images/FdTTomatoes.jpg);
   }
-  50% {
-    background-image: url(../images/header-example-image2.png);
+  15% {
+    background-image: url(../images/FdTTomatoes.jpg);
+  }
+  30% {
+    background-image: url(../images/FdT-taller.jpg);
+  }
+  45% {
+    background-image: url(../images/FdT-taller.jpg);
+  }
+  60% {
+    background-image: url(../images/FdTMerch.jpg);
+  }
+  75% {
+    background-image: url(../images/FdTMerch.jpg);
   }
   100% {
-    background-image: url(../images/header-example-image.png);
+    background-image: url(../images/FdTTomatoes.jpg);
   }
 }
 
@@ -43,11 +55,10 @@
   width: 100%;
   max-height: 828px;
   height: 100%;
-  background: transparent url("../images/header-example-image.png") no-repeat
-    center;
+  background: transparent url("../images/FdTTomatoes.jpg") no-repeat center;
   background-size: cover;
   color: #fff;
-  animation: change 7s infinite ease-in-out;
+  animation: change 20s infinite;
 }
 
 .header__overlay {
@@ -79,6 +90,7 @@
 .header__contact {
   font-family: "Mulish", "Arial", "Helvetica", sans-serif;
   font-size: 14px;
+  font-size: clamp(10px, 5vw, 14px);
   font-weight: 300;
   line-height: 1.2;
   text-align: left;
@@ -120,7 +132,7 @@
 
 .header__heading {
   font-family: "Prompt", "Arial", "Helvetica", sans-serif;
-  font-size: 96px;
+  font-size: clamp(32px, 5vw, 96px);
   font-weight: 600;
   line-height: 1.2;
   text-align: center;
@@ -129,7 +141,7 @@
 
 .header__paragraph {
   font-family: "Mulish", "Arial", "Helvetica", sans-serif;
-  font-size: 20px;
+  font-size: clamp(16px, 5vw, 20px);
   font-weight: 300;
   line-height: 1.2;
   text-align: center;

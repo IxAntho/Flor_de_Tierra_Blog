@@ -17,6 +17,14 @@
 @font-face {
   font-family: "Prompt";
   font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/Prompt-Medium.ttf") format("woff2");
+}
+
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
   font-weight: 600;
   font-display: swap;
   src: url("./fonts/Prompt-SemiBold.ttf") format("woff2");
