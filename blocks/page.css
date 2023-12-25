@@ -11,4 +11,5 @@
   align-items: center;
   min-width: 320px;
   margin: 0 auto;
+  background-color: rgba(23, 23, 24, 0.05);
 }
