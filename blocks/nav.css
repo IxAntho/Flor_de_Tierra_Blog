@@ -5,17 +5,20 @@
   margin: 15px auto;
   max-width: 1232px;
   width: 100%;
-  transition: backdrop-filter 0.35s ease-in-out;
+  transition: backdrop-filter 0.7s ease, position 0.7s ease;
 }
 
 .nav__fixed {
   position: fixed;
+  z-index: 1;
   height: 50px;
   top: 0;
+  max-width: 1440px;
   width: 100%;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   margin: 0;
+  padding-right: 35px;
 }
 
 .nav__logo {
@@ -26,10 +29,11 @@
 }
 
 .nav__logo_fixed {
-  max-width: 70px;
-  width: 100%;
   max-height: 45px;
   height: 100%;
+  max-width: 35px;
+  width: 100%;
+  margin-left: 35px;
 }
 
 .nav__links {
@@ -43,11 +47,6 @@
   font-weight: 400;
   line-height: 1.2;
   text-align: left;
-  transition: color 0.5s ease;
-}
-
-.nav__links_fixed {
-  color: #009e00;
 }
 
 .nav__links-item {
@@ -55,7 +54,6 @@
 }
 
 .nav__link {
-  color: #cccccc;
   text-decoration: none;
   transition: color 0.35s ease-in-out;
 }
@@ -66,6 +64,7 @@
 
 .nav__links-item:hover {
   transform: scale(1.2);
+  color: #fff;
 }
 
 .nav__link:hover {
