@@ -17,7 +17,7 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > headerSocialHeight) {
     // Add the 'fixed' class to the navbar to make it fixed
     navBar.classList.add("nav__fixed");
-    logo.src = "../images/FDTSoloLogo.png";
+    logo.src = "../images/FDTFixed.png";
     logo.classList.add("nav__logo_fixed");
     navLinks.forEach((link) => {
       link.style.color = "#009e00";
@@ -47,6 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Change the content
     dynamicTextElement.textContent = words[index];
 
+    // Check if the current word is 'Agricultura' and apply different color
+    if (words[index] === "Agricultura") {
+      dynamicTextElement.style.color = "#B08900"; // Set your desired color
+    } else {
+      dynamicTextElement.style.color = "#009e00"; // Default color for other words
+    }
+
     // Apply the animation
     dynamicTextElement.style.animation = "slideUp 0.5s ease";
 
@@ -55,4 +62,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Update the text every 2 seconds (adjust as needed)
   setInterval(updateText, 2000);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".gallery__container");
+  const sectionBackground = document.querySelector(".gallery__background");
+  const heading = document.querySelector(".gallery__heading");
+  const text = document.querySelector(".gallery__span");
+  const imageGallery = document.querySelector(".gallery-wrap");
+
+  window.addEventListener("scroll", function () {
+    const scrollPosition = window.scrollY;
+
+    // Adjust the following values as needed
+    const headingChangePosition = 200;
+    const imageGalleryAppearPosition = 400;
+
+    if (scrollPosition > headingChangePosition) {
+      heading.textContent = "Flor de Tierra";
+      text.textContent = "";
+      heading.style.opacity = 0;
+      text.style.opacity = 0;
+      container.style.top = "75px";
+      sectionBackground.style.filter = "blur(10px)";
+      sectionBackground.style.backgroundColor = "white";
+    }
+
+    if (scrollPosition > imageGalleryAppearPosition) {
+      imageGallery.style.display = "flex";
+    }
+  });
 });

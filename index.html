@@ -111,13 +111,17 @@
               >
             </li>
             <li class="nav__links-item">
-              <a class="nav__link" href="#">Equipo</a>
+              <a class="nav__link" onclick="scrollToSection('gallery')"
+                >Galeria</a
+              >
             </li>
             <li class="nav__links-item">
-              <a class="nav__link" href="#">PMF</a>
+              <a class="nav__link" onclick="scrollToSection('services')">PMF</a>
             </li>
             <li class="nav__links-item">
-              <a class="nav__link" href="#">Contactanos</a>
+              <a class="nav__link" onclick="scrollToSection('services')"
+                >Contactanos</a
+              >
             </li>
           </ul>
         </nav>
@@ -193,7 +197,7 @@
         </div>
       </section>
       <section class="about" id="about">
-        <img class="about__image" src="./images/peaches.jpg" alt="Peaches" />
+        <img class="about__image" src="./images/peach.jpg" alt="Peaches" />
         <div class="about__content">
           <h2 class="about__heading">Nestra Misión</h2>
           <p class="about__subheading">Flor de Tierra</p>
@@ -263,11 +267,11 @@
         </p>
         <div class="services__info">
           <div class="services__info-container">
-            <p class="services__subsection-name">
+            <p class="services__info-name">
               Ayudando a los agricultores: cultivando productos más saludables y
               sostenibles con Flor de Tierra
             </p>
-            <p class="services__subsection-text">
+            <p class="services__info-text">
               Con FlorDeTierra, los agricultores pueden obtener productos
               orgánicos de alta calidad sin químicos ni pesticidas. Esto no solo
               beneficia su salud, sino también la del ambiente y los
@@ -275,28 +279,46 @@
             </p>
           </div>
           <img
-            class="services__subsection-image"
+            class="services__info-image"
             src="./images/FdTBigGreenhouse.jpg"
             alt="Greenhouse's inside photo"
           />
         </div>
         <div class="services__info">
           <img
-            class="services__subsection-image"
-            src="./images/Services8.jpg"
+            class="services__info-image"
+            src="./images/FdT-taller.jpg"
             alt="Greenhouse's inside photo"
           />
           <div class="services__info-container">
-            <p class="services__subsection-name">
+            <p class="services__info-name">
               Sea testigo del impacto transformador de la agricultura orgánica
               en las comunidades guatemaltecas
             </p>
-            <p class="services__subsection-text">
+            <p class="services__info-text">
               Nuestro compromiso con la sostenibilidad y la agricultura orgánica
               fomenta un impacto positivo, conectando la naturaleza con la
               vibrante vida guatemalteca. Únase a nosotros para ser testigo del
               poder transformador del cultivo orgánico.
             </p>
+          </div>
+        </div>
+      </section>
+      <section class="gallery" id="gallery">
+        <div class="gallery__container">
+          <p class="gallery__heading">
+            Descubra la esencia de Flor de Tierra
+            <span class="gallery__span"
+              >capturando la belleza de la armonía orgánica y las prácticas
+              agrícolas prósperas.</span
+            >
+          </p>
+          <div class="gallery-wrap">
+            <div class="gallery__item gallery__item_1"></div>
+            <div class="gallery__item gallery__item_2"></div>
+            <div class="gallery__item gallery__item_3"></div>
+            <div class="gallery__item gallery__item_4"></div>
+            <div class="gallery__item gallery__item_5"></div>
           </div>
         </div>
       </section>

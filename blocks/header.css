@@ -2,19 +2,25 @@
   0% {
     background-image: url(../images/FdTTomatoes.jpg);
   }
-  15% {
+  12% {
     background-image: url(../images/FdTTomatoes.jpg);
   }
-  30% {
-    background-image: url(../images/FdT-taller.jpg);
+  24% {
+    background-image: url(../images/Services6.jpg);
   }
-  45% {
-    background-image: url(../images/FdT-taller.jpg);
+  36% {
+    background-image: url(../images/Services6.jpg);
+  }
+  48% {
+    background-image: url(../images/Header4.jpg);
   }
   60% {
+    background-image: url(../images/Header4.jpg);
+  }
+  72% {
     background-image: url(../images/FdTMerch.jpg);
   }
-  75% {
+  84% {
     background-image: url(../images/FdTMerch.jpg);
   }
   100% {
@@ -58,7 +64,7 @@
   background: transparent url("../images/FdTTomatoes.jpg") no-repeat center;
   background-size: cover;
   color: #fff;
-  animation: change 20s infinite;
+  animation: change 25s infinite;
 }
 
 .header__overlay {
