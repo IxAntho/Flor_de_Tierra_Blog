@@ -48,24 +48,30 @@
 }
 
 .nav__links-item {
-  transition: transform 0.35s ease-in-out;
-}
-
-.nav__link {
-  text-decoration: none;
-  transition: color 0.35s ease-in-out;
-}
-
-.nav__link_fixed {
-  color: #fff;
+  transition: transform 0.35s ease-in-out, color 0.35s ease;
 }
 
 .nav__links-item:hover {
   transform: scale(1.2);
   color: #fff;
+  cursor: pointer;
 }
 
-.nav__link:hover {
-  color: #fff;
-  cursor: pointer;
+.nav__link {
+  text-decoration: none;
+  transition: color 0.35s ease-in-out;
+  color: #cccccc;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.nav__link_fixed {
+  color: #009e00;
+  transition: color 0.35s ease-in-out;
+
+  &:hover {
+    color: #fff;
+  }
 }
