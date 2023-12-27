@@ -64,66 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(updateText, 2000);
 });
 
-/*document.addEventListener("DOMContentLoaded", function () {
-  const container = document.querySelector(".gallery__container");
-  const heading = document.querySelector(".gallery__heading");
-  const sectionBackground = document.querySelector(".gallery__background");
-  const text = document.querySelector(".gallery__span");
-  const imageGallery = document.querySelector(".gallery-wrap");
-
-  window.addEventListener("scroll", function () {
-    const scrollPosition = window.scrollY;
-
-    // Adjust the following values as needed
-    const headingChangePosition = 600;
-    const imageGalleryAppearPosition = 600;
-
-    if (scrollPosition > headingChangePosition) {
-      heading.textContent = "Flor de Tierra";
-      text.textContent = "";
-      heading.style.opacity = 0;
-      text.style.opacity = 0;
-      container.style.top = "75px";
-      sectionBackground.style.filter = "blur(10px)";
-      sectionBackground.style.backgroundColor = "white";
-    }
-
-    if (scrollPosition > imageGalleryAppearPosition) {
-      imageGallery.style.display = "flex";
-    }
-  });
-});*/
-
-/*document.addEventListener("DOMContentLoaded", function () {
-  const container = document.querySelector(".gallery__container");
-  const background = document.querySelector(".gallery__background");
-  const heading = document.querySelector(".gallery__heading");
-  const span = document.querySelector(".gallery__span");
-  const imageGallery = document.querySelector("#image-gallery");
-
-  window.addEventListener("scroll", function () {
-    const scrollPosition = window.scrollY;
-
-    // Adjust the following values as needed
-    const headingChangePosition = 200;
-    const imageGalleryAppearPosition = 400;
-
-    if (scrollPosition > headingChangePosition) {
-      heading.textContent = "New Heading";
-      span.textContent = "New Text";
-      heading.style.opacity = 0;
-      span.style.opacity = 0;
-      container.style.top = "0";
-      background.style.filter = "blur(10px)";
-      background.style.backgroundColor = "white";
-    }
-
-    if (scrollPosition > imageGalleryAppearPosition) {
-      imageGallery.style.display = "flex";
-    }
-  });
-});*/
-
 // Get references to the necessary elements
 const gallery = document.querySelector(".gallery");
 const galleryItems = document.querySelectorAll(".gallery__item");

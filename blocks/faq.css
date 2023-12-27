@@ -1,0 +1,75 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1232px;
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+.faq__heading {
+  font-family: "Prompt", "Arial", "Helvetica", sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  color: #009e00;
+  margin: 0 0 10px 0;
+}
+
+.faq__paragraph {
+  font-family: "Prompt", "Arial", "Helvetica", sans-serif;
+  font-size: clamp(30px, 5vw, 43px);
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 0 74px 0;
+}
+
+.faq__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 556px);
+  gap: 60px;
+  margin: 0;
+  max-width: 1172px;
+  width: 100%;
+}
+
+.faq__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 258px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0 55px;
+}
+
+.faq__question {
+  display: flex;
+  align-items: center;
+  font-family: "Mulish", "Arial", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+  margin: 0 0 19px 0;
+  max-width: 443px;
+  width: 100%;
+}
+
+.faq__icon {
+  margin: 0 5px 0 0;
+}
+
+.faq__answer {
+  font-family: "Mulish", "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: left;
+  max-width: 443px;
+  width: 100%;
+}
