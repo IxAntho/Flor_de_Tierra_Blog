@@ -88,3 +88,43 @@ function handleItemLeave() {
   // Reset the background of the gallery to its default image
   gallery.style.backgroundImage = 'url("../images/peaches.jpg")'; // Replace with your default background image
 }
+
+function progress() {
+  var p = $("#progress");
+  var q = $("label").length;
+  var w = parseInt($("input").width() / q);
+  p.animate({ width: "+=" + w + "px" });
+}
+
+function nextQ() {
+  var a = [];
+  var v = $("input").val();
+  var q = $("label").length;
+  var c = $("#qContainer > div");
+  var s = parseInt($(".currentStep").html());
+
+  if (v == "") {
+    alert("Please answer the question!");
+  } else if (s == q) {
+    $("#wrapper").fadeOut("normal", function () {
+      $("#success").fadeIn("normal");
+    });
+  } else {
+    a.push(v);
+    progress();
+    s++;
+    $(".currentStep").html(s);
+    c.animate({ top: "-=45px" });
+    $("input").val("").focus();
+  }
+}
+
+$(document).ready(function () {
+  progress();
+
+  $("input").keyup(function (event) {
+    if (event.keyCode == 13) {
+      $("#submit").click();
+    }
+  });
+});

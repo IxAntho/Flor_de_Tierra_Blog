@@ -115,7 +115,7 @@
               <a class="nav__link" onclick="scrollToSection('faq')">PMF</a>
             </li>
             <li class="nav__links-item">
-              <a class="nav__link" onclick="scrollToSection('services')"
+              <a class="nav__link" onclick="scrollToSection('contact')"
                 >Contactanos</a
               >
             </li>
@@ -387,8 +387,55 @@
           </div>
         </div>
       </section>
-      <section class="form"></section>
+      <section class="contact" id="contact">
+        <h2 class="contact__heading">Contactanos!</h2>
+        <div class="contact__container">
+          <div class="contact__form-container">
+            <p class="contact__form-container-text">
+              Completa el siguiente formulario
+            </p>
+            <div class="form" id="wrapper">
+              <div class="form__container_questions" id="qContainer">
+                <div>
+                  <label class="form__label">Ingresa tu nombre</label>
+                  <label class="form__label">Ingresa tu e-mail</label>
+                </div>
+              </div>
+
+              <div class="form__container_input" id="iContainer">
+                <input class="form__input" type="text" />
+                <i
+                  id="submit"
+                  class="fa fa-arrow-right"
+                  aria-hidden="true"
+                  onclick="nextQ();"
+                ></i>
+              </div>
+
+              <div class="form__container_progress" id="pContainer">
+                <div id="progress" class="form__bar-progress"></div>
+              </div>
+
+              <div class="form__container_steps" id="sContainer">
+                <span class="form__current-step">1</span> / 2
+              </div>
+            </div>
+
+            <div class="form__success" id="success">
+              Estaremos en contacto contigo lo más pronto posible!
+            </div>
+            <div class="contact__divisor">- Ó -</div>
+            <div class="contact__social">
+              <p class="contact__social-heading">
+                Puedes contactarnos por medio de nuestras redes sociales
+              </p>
+            </div>
+          </div>
+          <div class="contact__gallery"></div>
+        </div>
+      </section>
     </main>
   </body>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="./script/index.js"></script>
 </html>

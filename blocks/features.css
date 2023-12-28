@@ -1,6 +1,5 @@
 .features {
   display: flex;
-  z-index: 0;
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 30px;
