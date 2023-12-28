@@ -28,6 +28,10 @@
       Fertilizantes Organicos para una Agricultura Sostenible | Flor de Tierra
     </title>
     <link rel="stylesheet" href="./pages/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="shortcut icon" href="./images/flor-de-tierra.ico" />
   </head>
   <body class="page">
@@ -388,47 +392,91 @@
         </div>
       </section>
       <section class="contact" id="contact">
-        <h2 class="contact__heading">Contactanos!</h2>
+        <h2 class="contact__heading">Cotiza con Nosotros!</h2>
         <div class="contact__container">
-          <div class="contact__form-container">
-            <p class="contact__form-container-text">
-              Completa el siguiente formulario
-            </p>
-            <div class="form" id="wrapper">
-              <div class="form__container_questions" id="qContainer">
-                <div>
-                  <label class="form__label">Ingresa tu nombre</label>
-                  <label class="form__label">Ingresa tu e-mail</label>
+          <div class="contact__sub-container">
+            <div class="contact__registration-form">
+              <div class="contact__form-text">
+                <p class="contact__form-heading">Pide una Cotización</p>
+                <p class="contact__form-paragraph">
+                  Completa el siguiente formulario
+                </p>
+              </div>
+              <form class="form">
+                <div class="input-section email-section">
+                  <input
+                    class="form__email"
+                    type="email"
+                    placeholder="INGRESA TU EMAIL"
+                    autocomplete="off"
+                  />
+                  <div class="animated-button">
+                    <span class="icon-paper-plane"
+                      ><i class="fa fa-envelope-o"></i></span
+                    ><span class="next-button email"
+                      ><i class="fa fa-arrow-up"></i
+                    ></span>
+                  </div>
                 </div>
-              </div>
+                <div class="input-section name-section folded">
+                  <input
+                    class="form__name"
+                    type="text"
+                    placeholder="INGRESA TU NOMBRE Y APELLIDO"
+                  />
+                  <div class="animated-button">
+                    <span class="icon-lock"
+                      ><i class="fa fa-user-circle-o"></i></span
+                    ><span class="next-button name"
+                      ><i class="fa fa-paper-plane"></i
+                    ></span>
+                  </div>
+                </div>
 
-              <div class="form__container_input" id="iContainer">
-                <input class="form__input" type="text" />
-                <i
-                  id="submit"
-                  class="fa fa-arrow-right"
-                  aria-hidden="true"
-                  onclick="nextQ();"
-                ></i>
-              </div>
-
-              <div class="form__container_progress" id="pContainer">
-                <div id="progress" class="form__bar-progress"></div>
-              </div>
-
-              <div class="form__container_steps" id="sContainer">
-                <span class="form__current-step">1</span> / 2
-              </div>
+                <div class="contact__success">
+                  <p>Te contactaremos lo más pronto posible</p>
+                </div>
+              </form>
             </div>
 
-            <div class="form__success" id="success">
-              Estaremos en contacto contigo lo más pronto posible!
-            </div>
-            <div class="contact__divisor">- Ó -</div>
+            <div class="contact__divisor">- ó -</div>
             <div class="contact__social">
               <p class="contact__social-heading">
                 Puedes contactarnos por medio de nuestras redes sociales
               </p>
+              <button
+                class="contact__button contact__button_fb"
+                onclick=" window.open('https://www.facebook.com/Flordetierraguate/','_blank')"
+              >
+                <img
+                  class="contact__logo"
+                  src="./images/Cfb.svg"
+                  alt="Facebook logo"
+                />
+                Facebook
+              </button>
+              <button
+                class="contact__button contact__button_ig"
+                onclick=" window.open('https://www.instagram.com/flordetierraguatemala/','_blank')"
+              >
+                <img
+                  class="contact__logo"
+                  src="./images/Cig.svg"
+                  alt="Instagram logo"
+                />
+                Instagram
+              </button>
+              <button
+                class="contact__button contact__button_wp"
+                onclick=" window.open('https://api.whatsapp.com/send?phone=%2B50253385566&data=ARCaVYlDGw0mYKcXjWpYH3ax_sSi8VK4Kz0Yqu5Rx6HoFZD-PmRuTV88HJ9m9lRWstVXP-VkgFG7XxLAhXUhoscUOJqSv0D-KKOhTcRoThRNbHNZ00iInSlU4UvadIQXq9TN9t-28V-EjRJVxAa_v76MFw&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR18dL6k9aeWrLe0hVGow8MmPYeIOc3daEkP5Wg-KbqY-1ruIShobO9DsUM','_blank')"
+              >
+                <img
+                  class="contact__logo"
+                  src="./images/Cwp.svg"
+                  alt="Whatsapp logo"
+                />
+                Whatsapp
+              </button>
             </div>
           </div>
           <div class="contact__gallery"></div>

@@ -89,42 +89,47 @@ function handleItemLeave() {
   gallery.style.backgroundImage = 'url("../images/peaches.jpg")'; // Replace with your default background image
 }
 
-function progress() {
-  var p = $("#progress");
-  var q = $("label").length;
-  var w = parseInt($("input").width() / q);
-  p.animate({ width: "+=" + w + "px" });
-}
-
-function nextQ() {
-  var a = [];
-  var v = $("input").val();
-  var q = $("label").length;
-  var c = $("#qContainer > div");
-  var s = parseInt($(".currentStep").html());
-
-  if (v == "") {
-    alert("Please answer the question!");
-  } else if (s == q) {
-    $("#wrapper").fadeOut("normal", function () {
-      $("#success").fadeIn("normal");
-    });
+$(".form__email").on("change keyup paste", function () {
+  if ($(this).val()) {
+    $(".icon-paper-plane").addClass("next");
   } else {
-    a.push(v);
-    progress();
-    s++;
-    $(".currentStep").html(s);
-    c.animate({ top: "-=45px" });
-    $("input").val("").focus();
+    $(".icon-paper-plane").removeClass("next");
   }
-}
-
-$(document).ready(function () {
-  progress();
-
-  $("input").keyup(function (event) {
-    if (event.keyCode == 13) {
-      $("#submit").click();
-    }
-  });
 });
+
+$(".next-button").hover(function () {
+  $(this).css("cursor", "pointer");
+});
+
+$(".next-button.email").click(function () {
+  console.log("Something");
+  $(".email-section").addClass("fold-up");
+  $(".name-section").removeClass("folded");
+});
+
+$(".form__name").on("change keyup paste", function () {
+  if ($(this).val()) {
+    $(".icon-lock").addClass("next");
+  } else {
+    $(".icon-lock").removeClass("next");
+  }
+});
+
+$(".next-button").hover(function () {
+  $(this).css("cursor", "pointer");
+});
+
+$(".next-button.name").click(function () {
+  console.log("Something");
+  $(".password-section").addClass("fold-up");
+  //$(".repeat-password-section").removeClass("folded");
+  $(".contact__success").css("marginTop", 0);
+});
+
+/*$(".repeat-password").on("change keyup paste", function () {
+  if ($(this).val()) {
+    $(".icon-repeat-lock").addClass("next");
+  } else {
+    $(".icon-repeat-lock").removeClass("next");
+  }
+});*/
