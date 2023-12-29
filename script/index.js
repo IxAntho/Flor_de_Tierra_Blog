@@ -89,6 +89,42 @@ function handleItemLeave() {
   gallery.style.backgroundImage = 'url("../images/peaches.jpg")'; // Replace with your default background image
 }
 
+function submitForm() {
+  var emailValue = $(".form__email").val();
+  var nameValue = $(".form__name").val();
+
+  // Check if both email and name have values
+  if (emailValue && nameValue) {
+    // Prepare data for submission
+    var formData = {
+      email: emailValue,
+      name: nameValue,
+    };
+
+    // Send data to Formspree using AJAX
+    $.ajax({
+      type: "POST",
+      url: "https://formspree.io/flordetierra.agricola@gmail.com",
+      data: formData,
+      dataType: "json",
+      success: function () {
+        // Success callback
+        console.log("Form submitted successfully");
+        // You can perform additional actions here, such as showing a success message
+      },
+      error: function () {
+        // Error callback
+        console.log("Error submitting form");
+        // You can handle errors or show an error message
+      },
+    });
+  } else {
+    // Handle the case when either email or name is empty
+    console.log("Please fill in both email and name");
+    // You can also show an error message to the user
+  }
+}
+
 $(".form__email").on("change keyup paste", function () {
   if ($(this).val()) {
     $(".icon-paper-plane").addClass("next");
@@ -119,17 +155,10 @@ $(".next-button").hover(function () {
   $(this).css("cursor", "pointer");
 });
 
-$(".next-button.name").click(function () {
+$(".next-button.name").click(function (e) {
+  e.preventDefault(); // Prevent the default form submission
+  submitForm();
   console.log("Something");
   $(".password-section").addClass("fold-up");
-  //$(".repeat-password-section").removeClass("folded");
   $(".contact__success").css("marginTop", 0);
 });
-
-/*$(".repeat-password").on("change keyup paste", function () {
-  if ($(this).val()) {
-    $(".icon-repeat-lock").addClass("next");
-  } else {
-    $(".icon-repeat-lock").removeClass("next");
-  }
-});*/
