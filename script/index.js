@@ -104,7 +104,7 @@ function submitForm() {
     // Send data to Formspree using AJAX
     $.ajax({
       type: "POST",
-      url: "https://formspree.io/flordetierra.agricola@gmail.com",
+      url: "https://formspree.io/f/mjvnvvgp",
       data: formData,
       dataType: "json",
       success: function () {
@@ -158,7 +158,7 @@ $(".next-button").hover(function () {
 $(".next-button.name").click(function (e) {
   e.preventDefault(); // Prevent the default form submission
   submitForm();
-  console.log("Something");
+  console.log("form submitted");
   $(".password-section").addClass("fold-up");
   $(".contact__success").css("marginTop", 0);
 });
