@@ -182,6 +182,7 @@
 
   &:hover {
     border-radius: 0;
+    cursor: pointer;
   }
 }
 
