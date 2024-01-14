@@ -7,7 +7,7 @@ const navBar = document.getElementById("navbar");
 const navLinks = document.querySelectorAll(".nav__link");
 const logo = document.getElementById("navLogo");
 
-// Get the height of the info bar with .offsetHeight
+/*// Get the height of the info bar with .offsetHeight
 const headerSocialHeight =
   document.querySelector(".header__social").offsetHeight;
 
@@ -31,7 +31,7 @@ window.addEventListener("scroll", () => {
       link.classList.remove("nav__link_fixed");
     });
   }
-});
+});*/
 
 document.addEventListener("DOMContentLoaded", function () {
   const dynamicTextElement = document.getElementById("dynamic-text");
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (words[index] === "Agricultura") {
       dynamicTextElement.style.color = "#B08900"; // Set your desired color
     } else {
-      dynamicTextElement.style.color = "#009e00"; // Default color for other words
+      dynamicTextElement.style.color = "#067507"; // Default color for other words
     }
 
     // Apply the animation
