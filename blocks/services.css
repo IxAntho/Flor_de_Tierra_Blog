@@ -20,20 +20,9 @@
   padding-top: 70px;
 }
 
-.services__wrapper {
-  display: flex;
-  flex-direction: column;
-  max-width: 780px;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  margin-bottom: 25px;
-}
-
 .services__heading {
   font-family: "Prompt", "Arial", "Helvetica", sans-serif;
-  font-size: 43px;
+  font-size: clamp(32px, 5vw, 96px);
   font-weight: 400;
   line-height: 1.2;
   text-align: center;
@@ -49,6 +38,9 @@
   text-align: center;
   margin: 0 0 20px 0;
   padding: 10px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .services__container {
@@ -103,19 +95,19 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
   width: 100%;
   padding: 20px;
-  background-color: #fff;
+  row-gap: 45px;
 }
 
 .services__title {
   font-family: "Prompt", "Arial", "Helvetica", sans-serif;
-  font-size: 21px;
+  font-size: clamp(32px, 5vw, 60px);
   font-weight: 700;
   line-height: 1.2;
   text-align: left;
   color: #000;
+  margin: 0;
 }
 
 .services__product {
@@ -123,26 +115,34 @@
   grid-template-areas:
     "title image"
     "text image";
+  grid-template-columns: 550px 225px;
+  column-gap: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
 
 .services__name {
   grid-area: title;
   font-family: "Prompt", "Arial", "Helvetica", sans-serif;
-  font-size: 21px;
+  font-size: clamp(32px, 5vw, 60px);
   font-weight: 700;
   line-height: 1.2;
   text-align: left;
   color: #009e00;
+  margin: 0;
 }
 
 .services__description {
   grid-area: text;
   font-family: "Mulish", "Arial", "Helvetica", sans-serif;
-  font-size: 16px;
+  font-size: clamp(16px, 5vw, 28px);
   font-weight: 300;
   line-height: 1.2;
   text-align: left;
   color: #000;
+  margin: 0;
 }
 
 .services__product-image {
@@ -151,6 +151,8 @@
   width: 100%;
   max-height: 300px;
   height: 100%;
+  border-radius: 10px;
+  box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.1);
 }
 
 .services__text {
