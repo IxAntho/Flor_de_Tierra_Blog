@@ -5,4 +5,9 @@
   align-items: center;
   min-width: 320px;
   width: 100%;
+  /*
+  background-image: url(../images/pageGifBackground.gif);
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed;*/
 }

@@ -35,47 +35,59 @@
     <link rel="shortcut icon" href="./images/flor-de-tierra.ico" />
   </head>
   <body class="page">
-    <div class="page__background"></div>
     <header class="header">
       <div class="header__overlay">
-        <nav class="nav" id="navbar">
-          <img
-            class="nav__logo"
-            id="navLogo"
-            src="./images/FdT.png"
-            alt="Flor de Tierra logo"
-          />
-          <ul class="nav__links" id="nav__links">
-            <li class="nav__links-item">
-              <a class="nav__link" onclick="scrollToSection('home')">Inicio</a>
-            </li>
-            <li class="nav__links-item">
-              <a class="nav__link" onclick="scrollToSection('about')"
-                >Nosotros</a
-              >
-            </li>
-            <li class="nav__links-item">
-              <a class="nav__link" onclick="scrollToSection('services')"
-                >Servicios</a
-              >
-            </li>
-            <li class="nav__links-item">
-              <a class="nav__link" onclick="scrollToSection('gallery')"
-                >Galeria</a
-              >
-            </li>
-            <li class="nav__links-item">
-              <a class="nav__link" onclick="scrollToSection('faq')"
-                >Preguntas</a
-              >
-            </li>
-            <li class="nav__links-item">
-              <a class="nav__link" onclick="scrollToSection('contact')"
-                >Contactanos</a
-              >
-            </li>
-          </ul>
-        </nav>
+        <div class="header__nav-bar" id="header__nav-bar">
+          <div class="header__nav-container">
+            <img
+              class="header__logo"
+              id="navLogo"
+              src="../images/FDTFixed.png"
+              alt="Flor de Tierra logo"
+            />
+            <div class="header__menu-link-container">
+              <a href="#nav" class="header__menu-link">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+              </a>
+            </div>
+            <nav class="nav" id="nav">
+              <ul class="nav__links" id="nav__links">
+                <li class="nav__links-item">
+                  <a class="nav__link" onclick="scrollToSection('home')"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav__links-item">
+                  <a class="nav__link" onclick="scrollToSection('about')"
+                    >Nosotros</a
+                  >
+                </li>
+                <li class="nav__links-item">
+                  <a class="nav__link" onclick="scrollToSection('services')"
+                    >Servicios</a
+                  >
+                </li>
+                <li class="nav__links-item">
+                  <a class="nav__link" onclick="scrollToSection('gallery')"
+                    >Galeria</a
+                  >
+                </li>
+                <li class="nav__links-item">
+                  <a class="nav__link" onclick="scrollToSection('faq')"
+                    >Preguntas</a
+                  >
+                </li>
+                <li class="nav__links-item">
+                  <a class="nav__link" onclick="scrollToSection('contact')"
+                    >Contactanos</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
         <div class="header__description">
           <h1 class="header__heading">Bienvenidos a Flor De Tierra</h1>
           <p class="header__paragraph">
@@ -262,14 +274,26 @@
             />
           </div>
           <div class="services__product">
-            <p class="services__name"></p>
-            <p class="services__description"></p>
-            <img class="services__product-image" />
+            <p class="services__name">ProbA</p>
+            <p class="services__description">
+              Mejorador del sistema digestivo animal. Mejora en calidad y
+              cantidad la producción animal y reduce el riesgo a diversas
+              enfermedades.
+            </p>
+            <img
+              class="services__product-image"
+              src="./images/probA.jpg"
+              alt="ProbA contenedor pequeño"
+            />
           </div>
           <div class="services__product">
-            <p class="services__name"></p>
-            <p class="services__description"></p>
-            <img class="services__product-image" />
+            <p class="services__name">Otros</p>
+            <p class="services__description">Gallinas y frutales.</p>
+            <img
+              class="services__product-image"
+              src="./images/gallinas-frutales.jpg"
+              alt="Productos para gallinas y frutales"
+            />
           </div>
           <div class="services__service"></div>
           <div class="services__service"></div>

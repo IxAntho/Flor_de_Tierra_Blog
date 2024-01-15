@@ -1,38 +1,79 @@
+//smooth scrolling function
+/**
+ * Scrolls to a section of the webpage with vertical centering.
+ * @param {string} sectionId - The ID of the section to scroll to.
+ */
 function scrollToSection(sectionId) {
-  document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+  // Get the reference to the section element using its ID
+  var section = document.getElementById(sectionId);
+
+  // Get the height of the viewport
+  var windowHeight = window.innerHeight;
+
+  // Get the height of the section
+  var sectionHeight = section.clientHeight;
+
+  // Calculate the offset needed to vertically center the section
+  var offset = (sectionHeight - windowHeight) / 2;
+
+  // Use scrollIntoView with options for smooth scrolling and centering
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center",
+  });
 }
 
-// Get the navbar element
-const navBar = document.getElementById("navbar");
-const navLinks = document.querySelectorAll(".nav__link");
-const logo = document.getElementById("navLogo");
+//Responsive nav bar functions
+$(document).ready(function () {
+  $("html").on("DOMMouseScroll mousewheel", function (e) {
+    if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+      //alternative options for wheelData: wheelDeltaX & wheelDeltaY
+      //scroll down
+      console.log("Down");
+      $("#header__nav-bar").addClass("header__nav-bar_hidden");
+    } else {
+      //scroll up
+      console.log("Up");
+      $("#header__nav-bar").removeClass("header__nav-bar_hidden");
+    }
+    //prevent page fom scrolling
+    //return false;
+  });
 
-/*// Get the height of the info bar with .offsetHeight
-const headerSocialHeight =
-  document.querySelector(".header__social").offsetHeight;
+  // On click show menu on small screen
 
-// Add a scroll event listener
-window.addEventListener("scroll", () => {
-  // Check if the user has scrolled past the info bar
-  if (window.scrollY > headerSocialHeight) {
-    // Add the 'fixed' class to the navbar to make it fixed
-    navBar.classList.add("nav__fixed");
-    logo.src = "../images/FDTFixed.png";
-    logo.classList.add("nav__logo_fixed");
-    navLinks.forEach((link) => {
-      link.classList.add("nav__link_fixed");
-    });
-  } else {
-    // Remove the 'fixed' class to revert to the initial state
-    navBar.classList.remove("nav__fixed");
-    logo.src = "../images/FdT.png";
-    logo.classList.remove("nav__logo_fixed");
-    navLinks.forEach((link) => {
-      link.classList.remove("nav__link_fixed");
-    });
-  }
-});*/
+  var $menu = $("#nav"),
+    $menulink = $(".header__menu-link"),
+    $menuContainer = $(".header__menu-link-container");
 
+  $menulink.click(function () {
+    $menulink.toggleClass("nav_deployed");
+    $menu.toggleClass("nav_deployed");
+    return false;
+  });
+
+  var toggled = 0;
+
+  $(".header__menu-link").click(function () {
+    if (toggled == 0) {
+      $(".bar3").stop().transition({ rotate: "45", "margin-top": "13px" });
+      $(".bar2").stop().transition({ opacity: "0" }, "fast");
+      $(".bar1").stop().transition({ rotate: "-45", "margin-top": "13px" });
+      toggled++;
+      console.log("toggled down");
+    } else {
+      $(".bar3").stop().transition({ rotate: "+=135", "margin-top": "3px" });
+      $(".bar2").transition({ opacity: "1" }, "fast");
+      $(".bar1").stop().transition({ rotate: "-=135", "margin-top": "23px" });
+      toggled--;
+
+      console.log("Togged Up");
+    }
+  });
+});
+
+//Dymanic services text functions
 document.addEventListener("DOMContentLoaded", function () {
   const dynamicTextElement = document.getElementById("dynamic-text");
   const words = ["Orgánico", "Sustentable", "Alta Calidad", "Agricultura"];
@@ -64,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(updateText, 2000);
 });
 
+//Gallery dymanic background functions
 // Get references to the necessary elements
 const gallery = document.querySelector(".gallery");
 const galleryItems = document.querySelectorAll(".gallery__item");
@@ -89,6 +131,7 @@ function handleItemLeave() {
   gallery.style.backgroundImage = 'url("../images/peaches.jpg")'; // Replace with your default background image
 }
 
+//Form functions
 function submitForm() {
   var emailValue = $(".form__email").val();
   var nameValue = $(".form__name").val();

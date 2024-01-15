@@ -1,38 +1,11 @@
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  margin: 0 auto;
+  margin: 0;
   max-width: 1232px;
   width: 100%;
-  transition: backdrop-filter 0.8s ease-in-out, position 0.8s ease-in-out;
-}
-
-.nav__fixed {
-  position: fixed;
-  z-index: 1;
-  height: 50px;
-  top: 0;
-  max-width: 1440px;
-  width: 100%;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  margin: 0;
-  padding-right: 35px;
-  transition-delay: 0s;
-}
-
-.nav__logo {
-  max-width: 150px;
-  width: 100%;
-  max-height: 125px;
-  height: 100%;
-}
-
-.nav__logo_fixed {
-  max-height: 45px;
-  height: 100%;
-  margin-left: 35px;
+  padding: 10px;
 }
 
 .nav__links {
@@ -61,18 +34,85 @@
 .nav__link {
   text-decoration: none;
   transition: color 0.35s ease-in-out;
-  color: #cccccc;
-
+  color: #085f09;
   &:hover {
-    color: #fff;
+    color: #04bf00;
   }
 }
 
-.nav__link_fixed {
-  color: #009e00;
-  transition: color 0.35s ease-in-out;
+.header__menu-link-container {
+  visibility: hidden;
+  position: absolute;
+}
 
-  &:hover {
-    color: #fff;
+.header__menu-link {
+  max-width: 33px;
+  width: 100%;
+  max-height: 40px;
+  height: 100%;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  margin-top: 3px;
+  background: #085f09;
+  width: 33px;
+  height: 4px;
+  position: absolute;
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+}
+.bar2 {
+  margin-top: 13px;
+}
+.bar3 {
+  margin-top: 23px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+@media screen and (max-width: 991px) {
+  .header__nav-container {
+    max-width: 800px;
+    flex-wrap: wrap;
+  }
+
+  .header__menu-link-container {
+    visibility: visible;
+    order: 2;
+    right: 20%;
+    top: 40px;
+  }
+
+  .header__menu-link {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .nav {
+    order: 1;
+    padding: 0 0 0 10px;
+    justify-content: flex-start;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+
+  .nav_deployed {
+    max-height: 15em;
+  }
+
+  .nav__links {
+    flex-direction: column;
+    row-gap: 5px;
   }
 }
