@@ -40,86 +40,92 @@
   </head>
   <body class="page">
     <header class="header">
-      <div class="header__overlay">
-        <div class="header__nav-bar" id="header__nav-bar">
-          <div class="header__nav-container">
-            <img
-              class="header__logo"
-              id="navLogo"
-              src="../images/FDTFixed.png"
-              alt="Flor de Tierra logo"
-            />
-            <div class="header__menu-link-container">
-              <a href="#nav" class="header__menu-link">
-                <span class="bar1"></span>
-                <span class="bar2"></span>
-                <span class="bar3"></span>
-              </a>
-            </div>
-            <nav class="nav" id="nav">
-              <ul class="nav__links" id="nav__links">
-                <li class="nav__links-item">
-                  <a class="nav__link" onclick="scrollToSection('home')"
-                    >Inicio</a
-                  >
-                </li>
-                <li class="nav__links-item">
-                  <a class="nav__link" onclick="scrollToSection('about')"
-                    >Nosotros</a
-                  >
-                </li>
-                <li class="nav__links-item">
-                  <a class="nav__link" onclick="scrollToSection('services')"
-                    >Servicios</a
-                  >
-                </li>
-                <li class="nav__links-item">
-                  <a class="nav__link" onclick="scrollToSection('gallery')"
-                    >Galeria</a
-                  >
-                </li>
-                <li class="nav__links-item">
-                  <a class="nav__link" onclick="scrollToSection('faq')"
-                    >Preguntas</a
-                  >
-                </li>
-                <li class="nav__links-item">
-                  <a class="nav__link" onclick="scrollToSection('contact')"
-                    >Contactanos</a
-                  >
-                </li>
-              </ul>
-            </nav>
+      <div class="header__nav-bar" id="header__nav-bar">
+        <div class="header__nav-container">
+          <img
+            class="header__logo"
+            id="navLogo"
+            src="../images/FDTFixed.png"
+            alt="Flor de Tierra logo"
+          />
+          <div class="header__menu-link-container">
+            <a href="#nav" class="header__menu-link">
+              <span class="bar1"></span>
+              <span class="bar2"></span>
+              <span class="bar3"></span>
+            </a>
           </div>
+          <nav class="nav" id="nav">
+            <ul class="nav__links" id="nav__links">
+              <li class="nav__links-item">
+                <a class="nav__link" onclick="scrollToSection('home')"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav__links-item">
+                <a class="nav__link" onclick="scrollToSection('about')"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav__links-item">
+                <a class="nav__link" onclick="scrollToSection('services')"
+                  >Servicios</a
+                >
+              </li>
+              <li class="nav__links-item">
+                <a class="nav__link" onclick="scrollToSection('gallery')"
+                  >Galeria</a
+                >
+              </li>
+              <li class="nav__links-item">
+                <a class="nav__link" onclick="scrollToSection('faq')"
+                  >Preguntas</a
+                >
+              </li>
+              <li class="nav__links-item">
+                <a class="nav__link" onclick="scrollToSection('contact')"
+                  >Contactanos</a
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div class="header__description">
-          <h1 class="header__heading">Bienvenidos a Flor De Tierra</h1>
-          <p class="header__paragraph">
-            Somos una iniciativa pionera en la generación de servicios y
-            productos agropecuarios biológicos, de alta calidad y amigables con
-            el ecosistema.
-          </p>
-        </div>
-        <div class="header__buttons">
-          <button
-            class="header__button header__button_about"
-            onclick="scrollToSection('about')"
-          >
-            Conoce más
-          </button>
-          <button
-            class="header__button header__button_contact"
-            onclick="scrollToSection('contact')"
-          >
-            Contactanos
-          </button>
-          <button
-            class="header__button header__button_narrow"
-            onclick="scrollToSection('home')"
-          >
-            <img src="./images/narrow-icon.svg" alt="Narrow icon" />
-          </button>
-        </div>
+      </div>
+      <div class="header__text">
+        <h1 class="header__heading">
+          Innovación agrícola
+          <img
+            class="header__icon"
+            src="./images/certificate.svg"
+            alt="Icono certificación"
+          />
+          <span class="header__span-accent">de alta calidad</span>
+        </h1>
+        <p class="header__paragraph">
+          Somos una iniciativa pionera en la generación de servicios y productos
+          agropecuarios biológicos, de alta calidad y amigables con el
+          ecosistema.
+        </p>
+      </div>
+      <div class="header__buttons">
+        <button
+          class="header__button header__button_about"
+          onclick="scrollToSection('about')"
+        >
+          Conoce más
+        </button>
+        <button
+          class="header__button header__button_contact"
+          onclick="scrollToSection('contact')"
+        >
+          Contactanos
+        </button>
+        <button
+          class="header__button header__button_narrow"
+          onclick="scrollToSection('home')"
+        >
+          <img src="./images/narrow-icon.svg" alt="Narrow icon" />
+        </button>
       </div>
     </header>
     <main class="main">

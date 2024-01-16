@@ -87,7 +87,6 @@
   margin: 0;
   background-color: transparent;
   padding: 10px;
-  background-color: #fff;
   /*Animation styles*/
   position: fixed;
   top: 0;
@@ -124,19 +123,44 @@
   padding: 10px;
 }
 
-.header__description {
-  max-width: 764px;
+.header__text {
+  max-width: 1232px;
   width: 100%;
-  margin: 40px auto 70px auto;
+  margin: 0;
+  padding: 200px 0 200px 0;
+  color: #000;
 }
 
 .header__heading {
   font-family: "Prompt", "Arial", "Helvetica", sans-serif;
-  font-size: clamp(32px, 5vw, 96px);
-  font-weight: 600;
+  font-size: clamp(32px, 5vw, 120px);
+  font-weight: 500;
   line-height: 1.2;
-  text-align: center;
-  margin: 0 0 20px 0;
+  text-align: left;
+  margin: 0 0 50px 0;
+  padding-left: 115px;
+  color: #085f09;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.header__icon {
+  width: 50px;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.header__span-accent {
+  font-family: "Prompt", "Arial", "Helvetica", sans-serif;
+  font-size: clamp(32px, 5vw, 120px);
+  font-weight: 500;
+  line-height: 1.2;
+  display: block;
+  text-align: right;
+  padding-right: 115px;
+  color: #085f09;
 }
 
 .header__paragraph {
@@ -145,7 +169,8 @@
   font-weight: 300;
   line-height: 1.2;
   text-align: center;
-  color: #fff;
+  max-width: 600px;
+  color: #085f09;
 }
 
 .header__buttons {
