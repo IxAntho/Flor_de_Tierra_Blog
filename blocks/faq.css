@@ -15,11 +15,9 @@
   line-height: 1.2;
   text-align: center;
   color: #009e00;
+  background-color: transparent;
   margin: 0 0 10px 0;
   padding: 10px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.1);
 }
 
 .faq__paragraph {
@@ -49,7 +47,18 @@
   background-color: #fff;
   border-radius: 10px;
   padding: 0 55px;
-  box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.1);
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.faq__card_show {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .faq__question {

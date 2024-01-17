@@ -16,7 +16,7 @@ function scrollToSection(sectionId) {
   // Calculate the offset needed to vertically center the section
   var offset = (sectionHeight - windowHeight) / 2;
 
-  if (sectionId === "home") {
+  if (sectionId === "home" || sectionId === "services") {
     section.scrollIntoView({ behavior: "smooth" });
     return;
   }
@@ -106,6 +106,36 @@ $(document).ready(function () {
   });
 });
 
+//Services and products animation logic
+const servicesTitles = document.querySelectorAll(".services__title");
+const servicesItems = document.querySelectorAll(".services__item");
+
+const servicesObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.id == "services__title"
+        ? entry.target.classList.toggle(
+            "services__title_show",
+            entry.isIntersecting
+          )
+        : entry.target.classList.toggle(
+            "services__item_show",
+            entry.isIntersecting
+          );
+    });
+  },
+  {
+    threshold: 1,
+  }
+);
+
+servicesTitles.forEach((title) => {
+  servicesObserver.observe(title);
+});
+servicesItems.forEach((item) => {
+  servicesObserver.observe(item);
+});
+
 //Dymanic services text functions
 document.addEventListener("DOMContentLoaded", function () {
   const dynamicTextElement = document.getElementById("dynamic-text");
@@ -163,6 +193,24 @@ function handleItemLeave() {
   // Reset the background of the gallery to its default image
   gallery.style.backgroundImage = 'url("../images/peaches.jpg")'; // Replace with your default background image
 }
+
+//FAQ animation logic
+const faq = document.querySelectorAll("faq__card");
+
+const faqObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("faq__card_show");
+    });
+  },
+  {
+    threshold: 1,
+  }
+);
+
+faq.forEach((question) => {
+  faqObserver.observe(question);
+});
 
 //Form functions
 function submitForm() {
