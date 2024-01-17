@@ -195,21 +195,26 @@ function handleItemLeave() {
 }
 
 //FAQ animation logic
-const faq = document.querySelectorAll("faq__card");
+const faq = document.querySelectorAll(".faq__card");
 
 const faqObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      entry.target.classList.toggle("faq__card_show");
+      console.log(entry);
+      entry.target.classList.toggle("faq__card_show", entry.isIntersecting);
+      if (entry.isIntersecting) {
+        faqObserver.unobserve(entry.target);
+      }
     });
   },
   {
-    threshold: 1,
+    threshold: 0.5,
+    rootMargin: "-50px",
   }
 );
 
-faq.forEach((question) => {
-  faqObserver.observe(question);
+faq.forEach((card) => {
+  faqObserver.observe(card);
 });
 
 //Form functions
