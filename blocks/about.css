@@ -7,8 +7,7 @@
   max-width: 1232px;
   width: 100%;
   margin-bottom: 85px;
-  background-color: #fff;
-  box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
   padding: 15px 0;
   border-radius: 10px;
 }
@@ -36,7 +35,7 @@
   letter-spacing: 2px;
   text-align: left;
   text-transform: uppercase;
-  color: #0091ea;
+  color: #009e00;
   margin: 0;
 }
 
@@ -46,7 +45,7 @@
   font-weight: 400;
   line-height: 1.2;
   text-align: left;
-  color: #000;
+  color: #085f09;
   margin: 10px 0 30px;
 }
 
