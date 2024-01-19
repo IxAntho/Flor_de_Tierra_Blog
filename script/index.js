@@ -168,6 +168,16 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(updateText, 2000);
 });
 
+//Colabs animation logic
+const colabContainer = document.getElementById("colaborations__container");
+console.log("offset top", colabContainer.offsetTop);
+/*window.addEventListener("scroll", () => {
+  let value = window.scrollY;
+
+  colabContainer.style.marginTop = value * 0.1 + "px";
+  colabContainer.style.marginLeft = value * -0.1 + "px";
+});*/
+
 //Gallery dymanic background functions
 // Get references to the necessary elements
 const gallery = document.querySelector(".gallery");

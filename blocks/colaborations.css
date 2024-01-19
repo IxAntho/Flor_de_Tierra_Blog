@@ -1,4 +1,9 @@
 .colaborations {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 2000px;
 }
 
 .colaborations__heading {
@@ -12,13 +17,56 @@
   color: #085f09;
 }
 
+.colaborations__container {
+  display: grid;
+  grid-template-columns: repeat(5, 1232px);
+  column-gap: 70px;
+  position: relative;
+  width: 100%;
+  height: 2000px;
+  margin-left: 110%;
+}
+
 .colaborations__colab {
   display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 1232px;
   width: 100%;
-  max-height: 1232px;
+  max-height: 550px;
   height: 100%;
+  margin: 0;
 }
+
+/*.colaborations__colab_n1 {
+  position: absolute;
+  top: 7%;
+  left: 100%;
+}
+
+.colaborations__colab_n2 {
+  position: absolute;
+  top: 7%;
+  left: 210%;
+}
+
+.colaborations__colab_n3 {
+  position: absolute;
+  top: 7%;
+  left: 315%;
+}
+
+.colaborations__colab_n4 {
+  position: absolute;
+  top: 7%;
+  left: 425%;
+}
+
+.colaborations__colab_n5 {
+  position: absolute;
+  top: 7%;
+  left: 530%;
+}*/
 
 .colaborations__collage {
   margin: 0;
@@ -62,10 +110,17 @@
 
 .colaborations__image_peru1 {
   grid-area: peru1;
+  max-height: 450px;
+  height: 100%;
 }
 
 .colaborations__image_peru2 {
   grid-area: peru2;
+  max-width: 300px;
+  width: 100%;
+  max-height: 400px;
+  height: 100%;
+  align-self: center;
 }
 
 .colaborations__image_mexico1 {
@@ -87,6 +142,11 @@
 .colaborations__image_roma3 {
   grid-area: roma3;
   align-self: center;
+}
+
+.colaborations__image_panama1 {
+  max-width: 450px;
+  width: 100%;
 }
 
 .colaborations__wrapper {
@@ -116,7 +176,7 @@
   font-weight: 300;
   line-height: 1.2;
   text-align: left;
-  margin: 0;
+  margin: 0 0 0 45px;
   padding: 10px;
   align-self: center;
 }
