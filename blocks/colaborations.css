@@ -151,3 +151,9 @@
   padding: 10px;
   align-self: center;
 }
+
+@media screen and (min-width: 1441px) {
+  .colaborations__container {
+    height: 700px;
+  }
+}

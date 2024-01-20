@@ -183,8 +183,8 @@ let tl = gsap.timeline({
     trigger: colabContainer,
     pin: true,
     scrub: 2,
-    start: "-=100", // Move start marker to the left by 200px
-    end: () => "+=" + (colabContainer.offsetWidth - 100), // Move end mar
+    start: "-=300",
+    end: () => "+=" + (colabContainer.offsetWidth - 300),
   },
 });
 
