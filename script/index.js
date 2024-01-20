@@ -122,6 +122,9 @@ const servicesObserver = new IntersectionObserver(
             "services__item_show",
             entry.isIntersecting
           );
+      if (entry.isIntersecting) {
+        servicesObserver.unobserve(entry.target);
+      }
     });
   },
   {
@@ -170,13 +173,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Colabs animation logic
 const colabContainer = document.getElementById("colaborations__container");
-console.log("offset top", colabContainer.offsetTop);
-/*window.addEventListener("scroll", () => {
-  let value = window.scrollY;
+const colabs = gsap.utils.toArray(".colaborations__colab");
 
-  colabContainer.style.marginTop = value * 0.1 + "px";
-  colabContainer.style.marginLeft = value * -0.1 + "px";
-});*/
+let tl = gsap.timeline({
+  defaults: {
+    ease: "none",
+  },
+  scrollTrigger: {
+    trigger: colabContainer,
+    pin: true,
+    scrub: 2,
+    start: "-=100", // Move start marker to the left by 200px
+    end: () => "+=" + (colabContainer.offsetWidth - 100), // Move end mar
+  },
+});
+
+tl.to(colabContainer, {
+  xPercent: -622,
+});
+
+colabs.forEach((stop, index) => {
+  tl.from(stop.querySelector(".colaborations__wrapper"), {
+    yPercent: -50,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: stop.querySelector(".colaborations__wrapper"),
+      start: "0 right", //upside-marker downside-marker
+      end: "100 1100", //upside-marker downside-marker
+      containerAnimation: tl,
+      scrub: true,
+    },
+  });
+});
 
 //Gallery dymanic background functions
 // Get references to the necessary elements
@@ -301,3 +329,6 @@ $(".next-button.name").click(function (e) {
   $(".password-section").addClass("fold-up");
   $(".contact__success").css("marginTop", 0);
 });
+
+//Copyright year automatic update logic
+document.getElementById("copyrightYear").innerHTML = new Date().getFullYear();

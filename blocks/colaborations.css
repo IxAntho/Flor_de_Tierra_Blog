@@ -3,7 +3,8 @@
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: 2000px;
+  height: 2100px;
+  overflow: hidden;
 }
 
 .colaborations__heading {
@@ -37,36 +38,6 @@
   height: 100%;
   margin: 0;
 }
-
-/*.colaborations__colab_n1 {
-  position: absolute;
-  top: 7%;
-  left: 100%;
-}
-
-.colaborations__colab_n2 {
-  position: absolute;
-  top: 7%;
-  left: 210%;
-}
-
-.colaborations__colab_n3 {
-  position: absolute;
-  top: 7%;
-  left: 315%;
-}
-
-.colaborations__colab_n4 {
-  position: absolute;
-  top: 7%;
-  left: 425%;
-}
-
-.colaborations__colab_n5 {
-  position: absolute;
-  top: 7%;
-  left: 530%;
-}*/
 
 .colaborations__collage {
   margin: 0;
