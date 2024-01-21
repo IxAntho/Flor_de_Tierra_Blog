@@ -76,7 +76,7 @@
   -o-transform: rotate(180deg);
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
   .header__nav-container {
     max-width: 800px;
     flex-wrap: wrap;

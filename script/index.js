@@ -183,8 +183,8 @@ let tl = gsap.timeline({
     trigger: colabContainer,
     pin: true,
     scrub: 2,
-    start: "-=100", // Move start marker to the left by 200px
-    end: () => "+=" + (colabContainer.offsetWidth - 100), // Move end mar
+    start: "-=100",
+    end: () => "+=" + (colabContainer.offsetWidth - 300),
   },
 });
 
@@ -192,16 +192,17 @@ tl.to(colabContainer, {
   xPercent: -622,
 });
 
-colabs.forEach((stop, index) => {
+colabs.forEach((stop) => {
   tl.from(stop.querySelector(".colaborations__wrapper"), {
     yPercent: -50,
     opacity: 0,
     scrollTrigger: {
       trigger: stop.querySelector(".colaborations__wrapper"),
-      start: "0 right", //upside-marker downside-marker
+      start: "0 1400", //upside-marker downside-marker
       end: "100 1100", //upside-marker downside-marker
       containerAnimation: tl,
       scrub: true,
+      markers: true,
     },
   });
 });

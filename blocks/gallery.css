@@ -94,3 +94,18 @@
 .gallery__item_5 {
   background-image: url("../images/Services2.jpg");
 }
+
+@media screen and (min-width: 1441px) {
+  .gallery {
+    height: 1440px;
+    max-width: 1700px;
+  }
+
+  .gallery__container {
+    max-width: 1700px;
+  }
+
+  .gallery-wrap {
+    max-width: 1050px;
+  }
+}

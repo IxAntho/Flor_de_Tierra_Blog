@@ -112,6 +112,16 @@
     color 0.55s ease-in-out;
 }
 
+.services__title_1 {
+  grid-area: title1;
+  padding-bottom: 20px;
+}
+
+.services__title_2 {
+  grid-area: title2;
+  padding-bottom: 20px;
+}
+
 .services__title_show {
   color: #085f09;
   transform: translateX(0);
@@ -136,6 +146,54 @@
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
   }
+}
+
+.services__item_1 {
+  grid-area: item1;
+}
+
+.services__item_2 {
+  grid-area: item2;
+}
+
+.services__item_3 {
+  grid-area: item3;
+}
+
+.services__item_4 {
+  grid-area: item4;
+}
+
+.services__item_5 {
+  grid-area: item5;
+}
+
+.services__item_6 {
+  grid-area: item6;
+}
+
+.services__item_7 {
+  grid-area: item7;
+}
+
+.services__item_8 {
+  grid-area: item8;
+}
+
+.services__item_9 {
+  grid-area: item9;
+}
+
+.services__item_10 {
+  grid-area: item10;
+}
+
+.services__item_11 {
+  grid-area: item11;
+}
+
+.services__item_12 {
+  grid-area: item12;
 }
 
 .services__item_show {
@@ -259,4 +317,54 @@
   max-width: 556px;
   width: 100%;
   border-radius: 6px;
+}
+
+@media screen and (min-width: 1441px) {
+  /*TODO: correct colabs overflow and services__title margins*/
+  .services {
+    max-width: 1440px;
+  }
+
+  .services__details {
+    display: grid;
+    place-items: center;
+    grid-template-areas:
+      "title1 title1"
+      "item1 item2"
+      "item3 item4"
+      "item5 item6"
+      "title2 title2"
+      "item7 item8"
+      "item9 item10"
+      "item11 item12";
+    grid-gap: 25px 35px;
+    padding: 0;
+  }
+
+  .services__text {
+    max-width: 1440px;
+  }
+
+  .services__text_type_fixed {
+    max-width: 900px;
+  }
+
+  .services__text_type_animated {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .services__text {
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+  }
+
+  .services__info {
+    max-width: 500px;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
 }
