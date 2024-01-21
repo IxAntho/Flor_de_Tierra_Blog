@@ -114,10 +114,12 @@
 
 .services__title_1 {
   grid-area: title1;
+  padding-bottom: 20px;
 }
 
 .services__title_2 {
   grid-area: title2;
+  padding-bottom: 20px;
 }
 
 .services__title_show {
@@ -335,8 +337,8 @@
       "item7 item8"
       "item9 item10"
       "item11 item12";
-    grid-template-columns: auto-fit auto-fit;
     grid-gap: 25px 35px;
+    padding: 0;
   }
 
   .services__text {
@@ -349,5 +351,20 @@
 
   .services__text_type_animated {
     max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .services__text {
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+  }
+
+  .services__info {
+    max-width: 500px;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
   }
 }

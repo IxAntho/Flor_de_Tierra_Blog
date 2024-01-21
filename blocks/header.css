@@ -38,13 +38,12 @@
 
 .header__nav-bar {
   z-index: 1;
-  max-width: 2400px;
+  max-width: 1232px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin: 0;
-  background-color: transparent;
   padding: 10px;
   background-color: transparent;
   /*Animation styles*/
@@ -206,4 +205,16 @@
   left: 85%;
   max-width: 250px;
   width: 100%;
+}
+
+@media screen and (min-width: 1441px) {
+  .header__text {
+    max-width: 1440px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header__nav-bar {
+    max-width: 900px;
+  }
 }

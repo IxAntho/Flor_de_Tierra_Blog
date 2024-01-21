@@ -221,3 +221,10 @@
   max-height: 25px;
   height: 100%;
 }
+
+@media screen and (min-width: 1441px) {
+  .contact {
+    height: 500px;
+    margin-bottom: 125px;
+  }
+}
