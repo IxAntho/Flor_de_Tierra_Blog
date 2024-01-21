@@ -172,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Colabs animation logic
+/*
 const colabContainer = document.getElementById("colaborations__container");
 const colabs = gsap.utils.toArray(".colaborations__colab");
 
@@ -183,8 +184,8 @@ let tl = gsap.timeline({
     trigger: colabContainer,
     pin: true,
     scrub: 2,
-    start: "-=300",
-    end: () => "+=" + (colabContainer.offsetWidth - 300),
+    //start: "-=300",
+    end: () => "+=" + colabContainer.offsetWidth,
   },
 });
 
@@ -204,6 +205,73 @@ colabs.forEach((stop, index) => {
       scrub: true,
     },
   });
+});*/
+const colabContainer = document.getElementById("colaborations__container");
+const colabs = gsap.utils.toArray(".colaborations__colab");
+
+//Get start point based on viewport width
+function updateStart() {
+  if (window.innerWidth >= 1024 && window.innerWidth <= 1230) {
+    return "-=100";
+  } else if (window.innerWidth >= 1231 && window.innerWidth <= 1439) {
+    return "-=200";
+  } else if (window.innerWidth >= 1440 && window.innerWidth <= 1800) {
+    return -610;
+  } else if (window.innerWidth > 1800) {
+    return -600;
+  }
+}
+
+let tl = gsap.timeline({
+  defaults: {
+    ease: "none",
+  },
+  scrollTrigger: {
+    trigger: colabContainer,
+    pin: true,
+    scrub: 2,
+    start: updateStart(),
+    end: () => "+=" + (colabContainer.offsetWidth + updateStart()),
+  },
+});
+
+//Get the xPercent based on viewport width
+function updateXPercent() {
+  if (window.innerWidth >= 1024 && window.innerWidth <= 1230) {
+    return -726;
+  } else if (window.innerWidth >= 1231 && window.innerWidth <= 1439) {
+    return -622;
+  } else if (window.innerWidth >= 1440 && window.innerWidth <= 1800) {
+    return -610;
+  } else if (window.innerWidth > 1800) {
+    return -600;
+  }
+}
+
+tl.to(colabContainer, {
+  xPercent: updateXPercent(),
+});
+
+colabs.forEach((stop) => {
+  tl.from(stop.querySelector(".colaborations__wrapper"), {
+    yPercent: -50,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: stop.querySelector(".colaborations__wrapper"),
+      start: "left right",
+      end: "center right",
+      containerAnimation: tl,
+      scrub: true,
+      markers: true,
+    },
+  });
+});
+
+// Adjust parameters on window resize
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 1024) {
+    tl.scrollTrigger.end = () => "+=" + colabContainer.offsetWidth;
+  }
 });
 
 //Gallery dymanic background functions

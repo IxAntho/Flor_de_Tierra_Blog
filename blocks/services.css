@@ -351,3 +351,25 @@
     max-width: 600px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .services__text {
+    max-width: 830px;
+  }
+
+  .services__text_type_fixed {
+    max-width: max-content;
+    margin: 0;
+    padding-right: 20px;
+  }
+
+  .services__text_type_animated {
+    max-width: 310px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .services__info {
+    box-shadow: none;
+  }
+}

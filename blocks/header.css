@@ -45,7 +45,7 @@
   align-items: flex-start;
   margin: 0;
   background-color: transparent;
-  padding: 10px;
+  padding: 10px 0;
   background-color: transparent;
   /*Animation styles*/
   position: fixed;
@@ -206,4 +206,10 @@
   left: 85%;
   max-width: 250px;
   width: 100%;
+}
+
+@media screen and (min-width: 1023px) {
+  .header__nav-bar {
+    max-width: 90%;
+  }
 }

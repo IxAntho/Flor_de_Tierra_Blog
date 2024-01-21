@@ -88,3 +88,11 @@
   max-width: 443px;
   width: 100%;
 }
+
+@media screen and (max-width: 1024px) {
+  .faq__container {
+    grid-template-columns: 556px;
+    place-items: center;
+    max-width: max-content;
+  }
+}

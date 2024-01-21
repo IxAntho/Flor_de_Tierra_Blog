@@ -5,7 +5,7 @@
   margin: 0;
   max-width: 1232px;
   width: 100%;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .nav__links {
@@ -76,7 +76,7 @@
   -o-transform: rotate(180deg);
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1023px) {
   .header__nav-container {
     max-width: 800px;
     flex-wrap: wrap;
