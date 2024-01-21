@@ -131,7 +131,7 @@
   grid-template-areas:
     "title image"
     "text image";
-  grid-template-columns: 450px 225px;
+  grid-template-columns: minmax(200px, 450px) minmax(125px, 225px);
   column-gap: 25px;
   background-color: transparent;
   padding: 0;
@@ -352,11 +352,19 @@
   }
 }
 
+@media screen and (max-width: 1232px) {
+  .services__info {
+    box-shadow: none;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .services__text {
     max-width: 830px;
   }
+}
 
+@media screen and (min-width: 320px) {
   .services__text_type_fixed {
     max-width: max-content;
     margin: 0;
@@ -364,12 +372,8 @@
   }
 
   .services__text_type_animated {
-    max-width: 310px;
+    max-width: max-content;
     margin: 0;
     padding: 0;
-  }
-
-  .services__info {
-    box-shadow: none;
   }
 }

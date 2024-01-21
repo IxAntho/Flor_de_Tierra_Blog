@@ -59,7 +59,7 @@
   margin: 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1231px) {
   .about__image {
     display: none;
   }

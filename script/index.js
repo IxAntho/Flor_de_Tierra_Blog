@@ -211,14 +211,16 @@ const colabs = gsap.utils.toArray(".colaborations__colab");
 
 //Get start point based on viewport width
 function updateStart() {
-  if (window.innerWidth >= 1024 && window.innerWidth <= 1230) {
+  if (window.innerWidth >= 1024 && window.innerWidth <= 1149) {
     return "-=100";
+  } else if (window.innerWidth >= 1150 && window.innerWidth <= 1231) {
+    return "-=150";
   } else if (window.innerWidth >= 1231 && window.innerWidth <= 1439) {
     return "-=200";
   } else if (window.innerWidth >= 1440 && window.innerWidth <= 1800) {
-    return -610;
+    return "-=300";
   } else if (window.innerWidth > 1800) {
-    return -600;
+    return "-=350";
   }
 }
 
@@ -237,12 +239,14 @@ let tl = gsap.timeline({
 
 //Get the xPercent based on viewport width
 function updateXPercent() {
-  if (window.innerWidth >= 1024 && window.innerWidth <= 1230) {
+  if (window.innerWidth >= 1024 && window.innerWidth <= 1149) {
     return -726;
+  } else if (window.innerWidth >= 1150 && window.innerWidth <= 1231) {
+    return -660;
   } else if (window.innerWidth >= 1231 && window.innerWidth <= 1439) {
     return -622;
   } else if (window.innerWidth >= 1440 && window.innerWidth <= 1800) {
-    return -610;
+    return -630;
   } else if (window.innerWidth > 1800) {
     return -600;
   }
@@ -262,7 +266,6 @@ colabs.forEach((stop) => {
       end: "center right",
       containerAnimation: tl,
       scrub: true,
-      markers: true,
     },
   });
 });

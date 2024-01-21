@@ -153,13 +153,17 @@
 }
 
 @media screen and (min-width: 1441px) {
+  .colaborations {
+    height: 1900px;
+  }
+
   .colaborations__container {
     height: 700px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1290px) {
   .colaborations {
-    height: 1800px;
+    height: 1700px;
   }
 }

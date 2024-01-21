@@ -94,3 +94,9 @@
 .gallery__item_5 {
   background-image: url("../images/Services2.jpg");
 }
+
+@media screen and (min-width: 1232px) {
+  .gallery {
+    height: 800px;
+  }
+}
