@@ -85,8 +85,8 @@
   .header__menu-link-container {
     visibility: visible;
     order: 2;
-    right: 20%;
-    top: 40px;
+    right: 10%;
+    top: 30px;
   }
 
   .header__menu-link {

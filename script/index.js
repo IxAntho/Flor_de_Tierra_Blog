@@ -172,110 +172,103 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Colabs animation logic
-/*
-const colabContainer = document.getElementById("colaborations__container");
-const colabs = gsap.utils.toArray(".colaborations__colab");
+if (window.innerWidth >= 1024) {
+  const colabContainer = document.getElementById("colaborations__container");
+  const colabs = gsap.utils.toArray(".colaborations__colab");
 
-let tl = gsap.timeline({
-  defaults: {
-    ease: "none",
-  },
-  scrollTrigger: {
-    trigger: colabContainer,
-    pin: true,
-    scrub: 2,
-    //start: "-=300",
-    end: () => "+=" + colabContainer.offsetWidth,
-  },
-});
+  //Get start point based on viewport width
+  function updateStart() {
+    if (window.innerWidth >= 1024 && window.innerWidth <= 1149) {
+      return "-=100";
+    } else if (window.innerWidth >= 1150 && window.innerWidth <= 1231) {
+      return "-=150";
+    } else if (window.innerWidth >= 1231 && window.innerWidth <= 1439) {
+      return "-=200";
+    } else if (window.innerWidth >= 1440 && window.innerWidth <= 1800) {
+      return "-=300";
+    } else if (window.innerWidth > 1800) {
+      return "-=350";
+    }
+  }
 
-tl.to(colabContainer, {
-  xPercent: -622,
-});
-
-colabs.forEach((stop, index) => {
-  tl.from(stop.querySelector(".colaborations__wrapper"), {
-    yPercent: -50,
-    opacity: 0,
+  let tl = gsap.timeline({
+    defaults: {
+      ease: "none",
+    },
     scrollTrigger: {
-      trigger: stop.querySelector(".colaborations__wrapper"),
-      start: "0 right", //upside-marker downside-marker
-      end: "100 1100", //upside-marker downside-marker
-      containerAnimation: tl,
-      scrub: true,
+      trigger: colabContainer,
+      pin: true,
+      scrub: 2,
+      start: updateStart(),
+      end: () => "+=" + (colabContainer.offsetWidth + updateStart()),
     },
   });
-});*/
-const colabContainer = document.getElementById("colaborations__container");
-const colabs = gsap.utils.toArray(".colaborations__colab");
 
-//Get start point based on viewport width
-function updateStart() {
-  if (window.innerWidth >= 1024 && window.innerWidth <= 1149) {
-    return "-=100";
-  } else if (window.innerWidth >= 1150 && window.innerWidth <= 1231) {
-    return "-=150";
-  } else if (window.innerWidth >= 1231 && window.innerWidth <= 1439) {
-    return "-=200";
-  } else if (window.innerWidth >= 1440 && window.innerWidth <= 1800) {
-    return "-=300";
-  } else if (window.innerWidth > 1800) {
-    return "-=350";
+  //Get the xPercent based on viewport width
+  function updateXPercent() {
+    if (window.innerWidth >= 1024 && window.innerWidth <= 1149) {
+      return -726;
+    } else if (window.innerWidth >= 1150 && window.innerWidth <= 1231) {
+      return -660;
+    } else if (window.innerWidth >= 1231 && window.innerWidth <= 1439) {
+      return -622;
+    } else if (window.innerWidth >= 1440 && window.innerWidth <= 1800) {
+      return -630;
+    } else if (window.innerWidth > 1800) {
+      return -600;
+    }
   }
-}
 
-let tl = gsap.timeline({
-  defaults: {
-    ease: "none",
-  },
-  scrollTrigger: {
-    trigger: colabContainer,
-    pin: true,
-    scrub: 2,
-    start: updateStart(),
-    end: () => "+=" + (colabContainer.offsetWidth + updateStart()),
-  },
-});
-
-//Get the xPercent based on viewport width
-function updateXPercent() {
-  if (window.innerWidth >= 1024 && window.innerWidth <= 1149) {
-    return -726;
-  } else if (window.innerWidth >= 1150 && window.innerWidth <= 1231) {
-    return -660;
-  } else if (window.innerWidth >= 1231 && window.innerWidth <= 1439) {
-    return -622;
-  } else if (window.innerWidth >= 1440 && window.innerWidth <= 1800) {
-    return -630;
-  } else if (window.innerWidth > 1800) {
-    return -600;
-  }
-}
-
-tl.to(colabContainer, {
-  xPercent: updateXPercent(),
-});
-
-colabs.forEach((stop) => {
-  tl.from(stop.querySelector(".colaborations__wrapper"), {
-    yPercent: -50,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: stop.querySelector(".colaborations__wrapper"),
-      start: "left right",
-      end: "center right",
-      containerAnimation: tl,
-      scrub: true,
-    },
+  tl.to(colabContainer, {
+    xPercent: updateXPercent(),
   });
-});
 
-// Adjust parameters on window resize
-window.addEventListener("resize", () => {
-  if (window.innerWidth >= 1024) {
-    tl.scrollTrigger.end = () => "+=" + colabContainer.offsetWidth;
-  }
-});
+  colabs.forEach((stop) => {
+    tl.from(stop.querySelector(".colaborations__wrapper"), {
+      yPercent: -50,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: stop.querySelector(".colaborations__wrapper"),
+        start: "left right",
+        end: "center right",
+        containerAnimation: tl,
+        scrub: true,
+      },
+    });
+  });
+
+  // Adjust parameters on window resize
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) {
+      tl.scrollTrigger.end = () => "+=" + colabContainer.offsetWidth;
+    }
+  });
+} else if (window.innerWidth <= 1023) {
+  const sectionTitle = document.querySelector(".colaborations__heading");
+  const colabItem = document.querySelectorAll(".colaborations__colab");
+
+  const colabsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle(
+          "colaboration_show",
+          entry.isIntersecting
+        );
+        if (entry.isIntersecting) {
+          colabsObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  colabsObserver.observe(sectionTitle);
+  colabItem.forEach((item) => {
+    colabsObserver.observe(item);
+  });
+}
 
 //Gallery dymanic background functions
 // Get references to the necessary elements
@@ -309,7 +302,6 @@ const faq = document.querySelectorAll(".faq__card");
 const faqObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      console.log(entry);
       entry.target.classList.toggle("faq__card_show", entry.isIntersecting);
       if (entry.isIntersecting) {
         faqObserver.unobserve(entry.target);

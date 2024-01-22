@@ -51,14 +51,14 @@
 .colaborations__collage_peru {
   display: grid;
   grid-template-areas: "peru1 peru2";
-  grid-template-columns: 450px 300px;
+  grid-template-columns: minmax(100px, 450px) minmax(75px, 300px);
   grid-gap: 20px 17px;
 }
 
 .colaborations__collage_mexico {
   display: grid;
   grid-template-areas: "mexico1 mexico2";
-  grid-template-columns: 400px 350px;
+  grid-template-columns: minmax(85px, 400px) minmax(65px, 350px);
   grid-gap: 20px 17px;
   align-self: center;
 }
@@ -68,7 +68,7 @@
   grid-template-areas:
     "roma1 roma3"
     "roma2 roma3";
-  grid-template-columns: 350px 400px;
+  grid-template-columns: minmax(65px, 350px) minmax(85px, 400px);
   grid-gap: 20px 17px;
 }
 
@@ -165,5 +165,84 @@
 @media screen and (max-width: 1290px) {
   .colaborations {
     height: 1700px;
+    row-gap: 60px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .colaborations {
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .colaborations__heading {
+    transform: translateY(150px);
+    opacity: 0;
+    transition: transform 0.25s ease-in-out, opacity 0.1s ease-in-out,
+      box-shadow 0.3s ease-in-out;
+  }
+
+  .colaborations__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 100px;
+    height: max-content;
+    margin-left: 0;
+  }
+
+  .colaborations__colab {
+    max-width: 800px;
+    width: 100%;
+    max-height: 550px;
+    height: 100%;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: transform 0.25s ease-in-out, opacity 0.1s ease-in-out,
+      box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .colaborations__image_map {
+    max-width: 400px;
+  }
+
+  .colaborations__image_panama1 {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  .colaborations__wrapper {
+    row-gap: 25px;
+  }
+
+  .colaborations__country {
+    margin: 0;
+  }
+
+  .colaborations__text {
+    margin: 0;
+    padding: 0 0 0 10px;
+  }
+
+  .colaboration_show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .colaborations__colab {
+    flex-direction: column;
+    row-gap: 45px;
+    max-height: max-content;
+
+    &:hover {
+      box-shadow: none;
+    }
   }
 }

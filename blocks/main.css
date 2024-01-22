@@ -4,11 +4,14 @@
   justify-content: center;
   align-items: center;
   min-width: 320px;
+  max-width: 1440px;
   width: 100%;
+  margin: 0 auto;
   background-color: #fff;
-  /*
-  background-image: url(../images/pageGifBackground.gif);
-  background-position: center;
-  background-size: contain;
-  background-attachment: fixed;*/
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    padding: 15px;
+  }
 }
