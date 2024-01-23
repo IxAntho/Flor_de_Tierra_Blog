@@ -11,8 +11,20 @@
   align-items: center;
   min-width: 320px;
   max-width: 1440px;
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
   background-color: #fff;
   overflow-x: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .page {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .page {
+    max-width: 12440px;
+  }
 }

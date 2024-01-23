@@ -9,9 +9,8 @@
   margin: 0 auto;
   background-color: #fff;
 }
-
 @media screen and (max-width: 900px) {
   .main {
-    padding: 15px;
+    max-width: 12440px;
   }
 }

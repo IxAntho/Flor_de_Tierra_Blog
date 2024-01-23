@@ -93,9 +93,14 @@
 }
 
 @media screen and (max-width: 1023px) {
+  .footer {
+    padding: 15px 0;
+  }
+
   .footer__social {
     flex-wrap: wrap;
     row-gap: 10px;
     margin-bottom: 10px;
+    margin-left: 10px;
   }
 }

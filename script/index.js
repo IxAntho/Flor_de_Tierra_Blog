@@ -29,33 +29,50 @@ function scrollToSection(sectionId) {
 }
 
 //Header animation logic
-const headerTextContainer = document.getElementById("header__text");
-const headerHeading = document.getElementById("header__heading");
-const headerParagraph = document.getElementById("header__paragraph");
-const headerIcon = document.getElementById("header__icon");
-const headerSpanAccent = document.getElementById("header__span-accent");
-const headerImg1 = document.getElementById("header__image_1");
-const headerImg2 = document.getElementById("header__image_2");
-const headerImg3 = document.getElementById("header__image_3");
-const headerImg4 = document.getElementById("header__image_4");
-const headerImg5 = document.getElementById("header__image_5");
-const headerImg6 = document.getElementById("header__image_6");
-const headerImg7 = document.getElementById("header__image_7");
-const headerImg8 = document.getElementById("header__image_8");
+if (window.innerWidth > 700) {
+  const headerTextContainer = document.getElementById("header__text");
+  const headerHeading = document.getElementById("header__heading");
+  const headerParagraph = document.getElementById("header__paragraph");
+  const headerIcon = document.getElementById("header__icon");
+  const headerSpanAccent = document.getElementById("header__span-accent");
+  const headerImg1 = document.getElementById("header__image_1");
+  const headerImg2 = document.getElementById("header__image_2");
+  const headerImg3 = document.getElementById("header__image_3");
+  const headerImg4 = document.getElementById("header__image_4");
+  const headerImg5 = document.getElementById("header__image_5");
+  const headerImg6 = document.getElementById("header__image_6");
+  const headerImg7 = document.getElementById("header__image_7");
+  const headerImg8 = document.getElementById("header__image_8");
 
-window.addEventListener("scroll", () => {
-  let value = window.scrollY;
+  window.addEventListener("scroll", () => {
+    let value = window.scrollY;
 
-  headerTextContainer.style.marginTop = value + "px";
-  headerImg1.style.marginTop = value * -1.5 + "px";
-  headerImg2.style.marginTop = value * -0.89 + "px";
-  headerImg3.style.marginTop = value * -1.5 + "px";
-  headerImg4.style.marginTop = value * -0.4 + "px";
-  headerImg5.style.marginTop = value * -0.5 + "px";
-  headerImg6.style.marginTop = value * -1.15 + "px";
-  headerImg7.style.marginTop = value * -0.5 + "px";
-  headerImg8.style.marginTop = value * -0.8 + "px";
-});
+    headerTextContainer.style.marginTop = value + "px";
+    headerImg1.style.marginTop = value * -1.5 + "px";
+    headerImg2.style.marginTop = value * -0.89 + "px";
+    headerImg3.style.marginTop = value * -1.5 + "px";
+    headerImg4.style.marginTop = value * -0.4 + "px";
+    headerImg5.style.marginTop = value * -0.5 + "px";
+    headerImg6.style.marginTop = value * -1.15 + "px";
+    headerImg7.style.marginTop = value * -0.5 + "px";
+    headerImg8.style.marginTop = value * -0.8 + "px";
+  });
+} else if (window.innerWidth < 700) {
+  const scroller = document.querySelector(".header__images");
+
+  scroller.setAttribute("data-animated", true);
+
+  const innerScroller = document.querySelector(".header__inner-images");
+  const innerScrollerContent = Array.from(innerScroller.children);
+
+  innerScrollerContent.forEach((item) => {
+    const duplicatedItem = item.cloneNode(true);
+    duplicatedItem.setAttribute("aria-hidden", true); // usefull for screen reader user to not read twice all these duplicated elements
+    innerScroller.appendChild(duplicatedItem);
+  });
+
+  innerScroller.style.width = `${innerScrollerContent.length * 200}%`;
+}
 
 //Responsive nav bar functions
 $(document).ready(function () {
