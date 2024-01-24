@@ -20,6 +20,7 @@
 }
 
 .contact {
+  z-index: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -223,7 +224,18 @@
 
 @media screen and (min-width: 1232px) {
   .contact {
-    height: 800px;
+    height: max-content;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  .contact {
+    margin-bottom: 45px;
+  }
+
+  .contact__gallery {
+    display: flex;
+    height: 500px;
   }
 }
 
@@ -240,11 +252,5 @@
 @media screen and (max-width: 450px) {
   .contact {
     padding-top: 65px;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .contact {
-    margin-bottom: 45px;
   }
 }

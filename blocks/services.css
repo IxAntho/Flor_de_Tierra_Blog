@@ -415,11 +415,11 @@
   }
 
   .services__name {
-    font-size: clamp(24px, 5vw, 32px);
+    font-size: 18px;
   }
 
   .services__description {
-    font-size: clamp(12px, 5vw, 16px);
+    font-size: 12px;
   }
 
   .services__item-image {

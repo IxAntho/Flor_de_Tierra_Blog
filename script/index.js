@@ -31,10 +31,6 @@ function scrollToSection(sectionId) {
 //Header animation logic
 if (window.innerWidth > 700) {
   const headerTextContainer = document.getElementById("header__text");
-  const headerHeading = document.getElementById("header__heading");
-  const headerParagraph = document.getElementById("header__paragraph");
-  const headerIcon = document.getElementById("header__icon");
-  const headerSpanAccent = document.getElementById("header__span-accent");
   const headerImg1 = document.getElementById("header__image_1");
   const headerImg2 = document.getElementById("header__image_2");
   const headerImg3 = document.getElementById("header__image_3");
@@ -199,7 +195,7 @@ if (window.innerWidth >= 1024) {
     } else if (window.innerWidth >= 1150 && window.innerWidth <= 1231) {
       return "-=150";
     } else if (window.innerWidth >= 1231 && window.innerWidth <= 1439) {
-      return "-=200";
+      return "-=170";
     } else if (window.innerWidth >= 1440 && window.innerWidth <= 1800) {
       return "-=300";
     } else if (window.innerWidth > 1800) {
