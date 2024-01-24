@@ -40,12 +40,13 @@
   text-align: left;
   margin: 0;
   padding: 0;
+  padding-right: 15px;
   max-width: 550px;
 }
 
 .gallery__span {
   font-family: "Mulish", "Arial", "Helvetica", sans-serif;
-  font-size: clamp(16px, 5vw, 30px);
+  font-size: clamp(16px, 5vw, 24px);
   font-weight: 300;
   line-height: 1.2;
   text-align: left;
@@ -54,6 +55,16 @@
 }
 
 .gallery-wrap {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  position: relative;
+  min-width: 590px;
+  height: 50vh;
+}
+
+.gallery__inner-wrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
   max-width: 682px;
@@ -113,7 +124,60 @@
 }
 
 @media screen and (max-width: 700px) {
+  @keyframes scrollGal {
+    to {
+      transform: translate(calc(-50% - 0.6rem));
+    }
+  }
+
+  .gallery {
+    margin-bottom: 85px;
+  }
+
   .gallery__container {
     background-image: none;
+    padding: 0;
+    color: #067507;
+
+    &:hover {
+      color: #067507;
+    }
+  }
+
+  .gallery__heading {
+    margin-bottom: 25px;
+  }
+
+  .gallery__span {
+    margin-top: 25px;
+  }
+
+  .gallery-wrap {
+    max-width: 700px;
+  }
+
+  .gallery__inner-wrapper {
+    flex-wrap: nowrap;
+    width: max-content;
+    max-width: max-content;
+    column-gap: 25px;
+    animation: scrollGal 25s var(--_animation-direction, reverse) linear
+      infinite;
+  }
+
+  .gallery__item {
+    width: 300px; /* Set the desired width */
+    max-width: 100%; /* Allow the element to shrink if needed */
+    flex: 0 0 auto;
+
+    &:hover {
+      flex: 0 0 auto; /* Adjust the max-width on hover if necessary */
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .gallery__heading {
+    font-size: clamp(24px, 5vw, 32px);
   }
 }

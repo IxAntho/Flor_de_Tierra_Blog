@@ -24,7 +24,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: max-content;
   width: 100%;
 }
 
@@ -39,7 +39,6 @@
 
 .contact__container {
   display: flex;
-  box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.1);
   align-items: center;
   column-gap: 50px;
   row-gap: 50px;
@@ -225,5 +224,27 @@
 @media screen and (min-width: 1232px) {
   .contact {
     height: 800px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contact {
+    margin-bottom: 40px;
+  }
+
+  .contact__gallery {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contact {
+    padding-top: 65px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .contact {
+    margin-bottom: 45px;
   }
 }

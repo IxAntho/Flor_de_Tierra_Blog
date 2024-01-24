@@ -58,16 +58,18 @@ if (window.innerWidth > 700) {
     headerImg8.style.marginTop = value * -0.8 + "px";
   });
 } else if (window.innerWidth < 700) {
-  const scroller = document.querySelector(".header__images");
-  scroller.setAttribute("data-animated", true);
+  const headerScroller = document.querySelector(".header__images");
+  headerScroller.setAttribute("data-animated", true);
 
-  const innerScroller = scroller.querySelector(".header__inner-images");
-  const innerScrollerContent = Array.from(innerScroller.children);
+  const headerInnerScroller = headerScroller.querySelector(
+    ".header__inner-images"
+  );
+  const headerInnerScrollerContent = Array.from(headerInnerScroller.children);
 
-  innerScrollerContent.forEach((item) => {
-    const duplicatedItem = item.cloneNode(true);
-    duplicatedItem.setAttribute("aria-hidden", true); // usefull for screen reader user to not read twice all these duplicated elements
-    innerScroller.appendChild(duplicatedItem);
+  headerInnerScrollerContent.forEach((item) => {
+    const headerDuplicatedItem = item.cloneNode(true);
+    headerDuplicatedItem.setAttribute("aria-hidden", true); // usefull for screen reader user to not read twice all these duplicated elements
+    headerInnerScroller.appendChild(headerDuplicatedItem);
   });
 }
 
@@ -311,6 +313,22 @@ if (window.innerWidth > 700) {
     gallery.style.backgroundImage = 'url("../images/peaches.jpg")'; // Replace with your default background image
   }
 } else if (window.innerWidth < 700) {
+  const galleryScroller = document.querySelector(".gallery-wrap");
+  galleryScroller.setAttribute("data-animated", true);
+
+  const galleryInnerScroller = galleryScroller.querySelector(
+    ".gallery__inner-wrapper"
+  );
+  const galleryInnerScrollerContent = Array.from(galleryInnerScroller.children);
+
+  console.log(galleryInnerScroller);
+  console.log(galleryInnerScrollerContent);
+
+  galleryInnerScrollerContent.forEach((item) => {
+    const galleryDuplicatedItem = item.cloneNode(true);
+    galleryDuplicatedItem.setAttribute("aria-hidden", true);
+    galleryInnerScroller.appendChild(galleryDuplicatedItem);
+  });
 }
 
 //FAQ animation logic

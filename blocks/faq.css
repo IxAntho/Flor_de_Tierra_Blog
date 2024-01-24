@@ -97,6 +97,25 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .faq__paragraph {
+    font-size: clamp(24px, 5vw, 32px);
+    margin-bottom: 45px;
+  }
+
+  .faq__container {
+    row-gap: 25px;
+  }
+
+  .faq__card {
+    height: max-content;
+  }
+
+  .faq__question {
+    height: max-content;
+  }
+}
+
 @media screen and (min-width: 320px) {
   .faq {
     margin-bottom: 0;
