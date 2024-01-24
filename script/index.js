@@ -59,10 +59,9 @@ if (window.innerWidth > 700) {
   });
 } else if (window.innerWidth < 700) {
   const scroller = document.querySelector(".header__images");
-
   scroller.setAttribute("data-animated", true);
 
-  const innerScroller = document.querySelector(".header__inner-images");
+  const innerScroller = scroller.querySelector(".header__inner-images");
   const innerScrollerContent = Array.from(innerScroller.children);
 
   innerScrollerContent.forEach((item) => {
@@ -70,8 +69,6 @@ if (window.innerWidth > 700) {
     duplicatedItem.setAttribute("aria-hidden", true); // usefull for screen reader user to not read twice all these duplicated elements
     innerScroller.appendChild(duplicatedItem);
   });
-
-  innerScroller.style.width = `${innerScrollerContent.length * 200}%`;
 }
 
 //Responsive nav bar functions
@@ -289,28 +286,31 @@ if (window.innerWidth >= 1024) {
 
 //Gallery dymanic background functions
 // Get references to the necessary elements
-const gallery = document.querySelector(".gallery");
-const galleryItems = document.querySelectorAll(".gallery__item");
+if (window.innerWidth > 700) {
+  const gallery = document.querySelector(".gallery");
+  const galleryItems = document.querySelectorAll(".gallery__item");
 
-// Add event listeners to each gallery item
-galleryItems.forEach((item) => {
-  item.addEventListener("mouseenter", handleItemHover);
-  item.addEventListener("mouseleave", handleItemLeave);
-});
+  // Add event listeners to each gallery item
+  galleryItems.forEach((item) => {
+    item.addEventListener("mouseenter", handleItemHover);
+    item.addEventListener("mouseleave", handleItemLeave);
+  });
 
-// Function to handle item hover
-function handleItemHover(event) {
-  // Get the background image of the hovered item
-  const backgroundImage = getComputedStyle(event.target).backgroundImage;
+  // Function to handle item hover
+  function handleItemHover(event) {
+    // Get the background image of the hovered item
+    const backgroundImage = getComputedStyle(event.target).backgroundImage;
 
-  // Set the background of the gallery to the hovered item's background image
-  gallery.style.backgroundImage = backgroundImage;
-}
+    // Set the background of the gallery to the hovered item's background image
+    gallery.style.backgroundImage = backgroundImage;
+  }
 
-// Function to handle item leave (reset background to default)
-function handleItemLeave() {
-  // Reset the background of the gallery to its default image
-  gallery.style.backgroundImage = 'url("../images/peaches.jpg")'; // Replace with your default background image
+  // Function to handle item leave (reset background to default)
+  function handleItemLeave() {
+    // Reset the background of the gallery to its default image
+    gallery.style.backgroundImage = 'url("../images/peaches.jpg")'; // Replace with your default background image
+  }
+} else if (window.innerWidth < 700) {
 }
 
 //FAQ animation logic
