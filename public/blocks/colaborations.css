@@ -301,4 +301,12 @@
   .colaborations__text {
     max-width: max-content;
   }
+
+  .colaborations__text_panama {
+    width: 300px !important;
+  }
+
+  .colaborations__text_roma {
+    width: 300px !important;
+  }
 }
