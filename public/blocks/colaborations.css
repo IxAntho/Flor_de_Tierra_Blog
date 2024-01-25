@@ -237,7 +237,7 @@
 
 @media screen and (max-width: 768px) {
   .colaborations {
-    height: 3150px;
+    height: 100%;
   }
 
   .colaborations__colab {
@@ -252,5 +252,13 @@
 
   .colaborations__collage {
     height: 300px;
+  }
+
+  .colaborations__image_roma1 {
+    height: 145px;
+  }
+
+  .colaborations__image_roma2 {
+    height: 145px;
   }
 }
