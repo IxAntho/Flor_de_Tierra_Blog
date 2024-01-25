@@ -40,12 +40,12 @@
   }
 }
 
-.header__menu-link-container {
+.nav__menu-link-container {
   visibility: hidden;
   position: absolute;
 }
 
-.header__menu-link {
+.nav__menu-link {
   max-width: 33px;
   width: 100%;
   max-height: 40px;
@@ -77,19 +77,14 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .header__nav-container {
-    max-width: 800px;
-    flex-wrap: wrap;
-  }
-
-  .header__menu-link-container {
+  .nav__menu-link-container {
     visibility: visible;
     order: 2;
     right: 10%;
     top: 30px;
   }
 
-  .header__menu-link {
+  .nav__menu-link {
     display: flex;
     cursor: pointer;
   }

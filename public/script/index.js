@@ -71,7 +71,7 @@ if (window.innerWidth > 700) {
 
 //Responsive nav bar functions
 $(document).ready(function () {
-  $("html").on("DOMMouseScroll mousewheel", function (e) {
+  $("html").on("wheel", function (e) {
     if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
       //alternative options for wheelData: wheelDeltaX & wheelDeltaY
       //scroll down
@@ -89,32 +89,46 @@ $(document).ready(function () {
   // On click show menu on small screen
 
   var $menu = $("#nav"),
-    $menulink = $(".header__menu-link"),
-    $menuContainer = $(".header__menu-link-container");
+    $menulink = $(".nav__menu-link"),
+    $menuContainer = $(".nav__menu-link-container");
 
-  $menulink.click(function () {
+  /*$menulink.click(function () {
     $menulink.toggleClass("nav_deployed");
     $menu.toggleClass("nav_deployed");
+    return false;
+  });*/
+
+  function toggleMenu() {
+    $menulink.toggleClass("nav_deployed");
+    $menu.toggleClass("nav_deployed");
+
+    $(".nav__menu-link").click(function () {
+      if (toggled == 0) {
+        $(".bar3").stop().animate({ rotate: "45", "margin-top": "13px" });
+        $(".bar2").stop().animate({ opacity: "0" }, "fast");
+        $(".bar1").stop().animate({ rotate: "-45", "margin-top": "13px" });
+        toggled++;
+        console.log("toggled down");
+      } else {
+        $(".bar3").stop().animate({ rotate: "+=135", "margin-top": "3px" });
+        $(".bar2").animate({ opacity: "1" }, "fast");
+        $(".bar1").stop().animate({ rotate: "-=135", "margin-top": "23px" });
+        toggled--;
+        console.log("Togged Up");
+      }
+    });
+  }
+
+  $menulink.click(function () {
+    toggleMenu();
     return false;
   });
 
   var toggled = 0;
 
-  $(".header__menu-link").click(function () {
-    if (toggled == 0) {
-      $(".bar3").stop().transition({ rotate: "45", "margin-top": "13px" });
-      $(".bar2").stop().transition({ opacity: "0" }, "fast");
-      $(".bar1").stop().transition({ rotate: "-45", "margin-top": "13px" });
-      toggled++;
-      console.log("toggled down");
-    } else {
-      $(".bar3").stop().transition({ rotate: "+=135", "margin-top": "3px" });
-      $(".bar2").transition({ opacity: "1" }, "fast");
-      $(".bar1").stop().transition({ rotate: "-=135", "margin-top": "23px" });
-      toggled--;
-
-      console.log("Togged Up");
-    }
+  $(".nav__link").click(function () {
+    toggleMenu();
+    $("#header__nav-bar").toggleClass("header__nav-bar_hidden");
   });
 });
 

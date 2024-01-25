@@ -250,6 +250,18 @@
     }
   }
 
+  .colaborations__collage_peru {
+    grid-template-rows: 300px;
+  }
+
+  .colaborations__collage_mexico {
+    grid-template-rows: 300px;
+  }
+
+  .colaborations__collage_roma {
+    grid-template-rows: 150px 150px;
+  }
+
   .colaborations__collage {
     height: 300px;
   }
@@ -260,6 +272,10 @@
 
   .colaborations__image_roma2 {
     height: 145px;
+  }
+
+  .colaborations__image_roma {
+    height: 300px;
   }
 }
 

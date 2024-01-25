@@ -201,6 +201,13 @@
   }
 }
 
+@media screen and (max-width: 1023px) {
+  .header__nav-container {
+    max-width: 800px;
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .header__nav-bar {
     max-width: 700px;
