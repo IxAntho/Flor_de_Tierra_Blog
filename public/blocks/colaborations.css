@@ -249,4 +249,8 @@
       box-shadow: none;
     }
   }
+
+  .colaborations__collage {
+    height: 300px;
+  }
 }
