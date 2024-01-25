@@ -236,6 +236,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  .colaborations {
+    max-height: max-content;
+    height: 100%;
+  }
+
   .colaborations__colab {
     flex-direction: column;
     row-gap: 45px;
