@@ -291,4 +291,14 @@
   .colaborations__image_peru2 {
     height: 250px;
   }
+
+  .colaborations__text {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .colaborations__text {
+    max-width: max-content;
+  }
 }

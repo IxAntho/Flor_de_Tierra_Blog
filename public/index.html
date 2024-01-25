@@ -34,6 +34,38 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="shortcut icon" href="./images/flor-de-tierra.ico" />
+    <script defer src="/__/firebase/10.7.2/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/10.7.2/firebase-auth-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/10.7.2/firebase-database-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/10.7.2/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/10.7.2/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/10.7.2/firebase-messaging-compat.js"
+    ></script>
+    <script defer src="/__/firebase/10.7.2/firebase-storage-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/10.7.2/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/10.7.2/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/10.7.2/firebase-performance-compat.js"
+    ></script>
   </head>
   <body class="page">
     <header class="header">
@@ -208,18 +240,18 @@
       <section class="about" id="about">
         <img class="about__image" src="./images/peach.jpg" alt="Peaches" />
         <div class="about__content">
-          <h2 class="about__heading">Nestra Misión</h2>
+          <h2 class="about__heading">Nuestra Misión</h2>
           <p class="about__subheading">Flor de Tierra</p>
           <p class="about__paragraph">
             Flor de Tierra es una empresa con fines sociales, que vincula el
             conocimiento científico y el conocimiento maya en diversas acciones
             de lucha contra el cambio climático. Buscamos mejorar la
-            productividad, rentabilidad y condiciones de salud de los
-            ecosistemas, sistemas productivos y de los agricultores. Vendemos y
+            productividad, rentabilidad, condiciones de salud de los
+            ecosistemas, sistemas y productivos de los agricultores. Vendemos y
             enseñamos a elaborar nuestros productos, con la finalidad de
-            transformar la agricultura convencional en una agricultura de amor.
-            Y, nos vinculamos a todo ecosistema que nos permita colaborar para
-            el buen vivir del campo.
+            transformar la agricultura convencional en una agricultura de amor
+            vinculandonos a todo ecosistema que nos permita colaborar para el
+            buen vivir del campo.
           </p>
         </div>
       </section>
@@ -372,7 +404,7 @@
             <p class="services__name">Asesorías silvopastoriles</p>
             <p class="services__description">
               Nutrición de ganado vacuno y bovino; fertilización y
-              establecimiento de pastos y forrajes adecuados; y determinación de
+              establecimiento de pastos y forrajes adecuados; determinación de
               especies forestales adecuadas para sistemas silvopastoriles.
             </p>
             <img
@@ -437,7 +469,7 @@
               sostenibles con Flor de Tierra
             </p>
             <p class="services__info-text">
-              Con FlorDeTierra, los agricultores pueden obtener productos
+              Con Flor de Tierra, los agricultores pueden obtener productos
               orgánicos de alta calidad sin químicos ni pesticidas. Esto no solo
               beneficia su salud, sino también la del ambiente y los
               consumidores que buscan alimentos más naturales.
@@ -670,8 +702,7 @@
               ¿Dónde puedo encontrar los productos de Flor de Tierra?
             </p>
             <p class="faq__answer">
-              Los productos de Flor de Tierra están disponibles en tiendas
-              locales y mercados, así como en nuestro sitio web.
+              Contactanos para una cotización sobre los productos que necesite.
             </p>
           </div>
         </div>
@@ -687,7 +718,6 @@
                   Completa el siguiente formulario
                 </p>
               </div>
-              <!--TODO: add a reCAPTCHA key for more security upon website deployment-->
               <form
                 class="form"
                 action="https://formspree.io/f/mjvnvvgp"
