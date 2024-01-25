@@ -1,89 +1,872 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.7.2/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.7.2/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.7.2/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.7.2/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.7.2/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.7.2/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.7.2/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.7.2/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.7.2/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.7.2/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Flor de Tierra cultiva la excelencia en la agricultura sustentable, ofreciendo fertilizantes orgánicos de alta calidad y soluciones sostenibles en Guatemala. Descubra nuestro compromiso de nutrir la tierra con fertilizantes de primera calidad y servicios respetuosos con los ecosistemas."
+    />
+    <meta
+      name="keyword"
+      content="Fertilizantes organicos,
+      Agricultura sostenible,
+      Nutrientes vegetales naturales,
+      Enriquecimiento del suelo,
+      Servicios agrícolas Guatemala,
+      Soluciones de agricultura orgánica,
+      Fertilizantes ecológicos,
+      Productos de nutrición vegetal,
+      Gestión sostenible del suelo,
+      agricultura guatemala,
+      Agricultura consciente del medio ambiente,
+      Nutrición de cultivos,
+      Fertilizantes amigables con el planeta,
+      Fertilizantes de base biológica"
+    />
+    <title>
+      Fertilizantes Organicos para una Agricultura Sostenible | Flor de Tierra
+    </title>
+    <link rel="stylesheet" href="./pages/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="./images/flor-de-tierra.ico" />
   </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  <body class="page">
+    <header class="header">
+      <div class="header__nav-bar" id="header__nav-bar">
+        <div class="header__nav-container">
+          <img
+            class="header__logo"
+            id="navLogo"
+            src="./images/FDTFixed.png"
+            alt="Flor de Tierra logo"
+          />
+          <div class="header__menu-link-container">
+            <a href="#nav" class="header__menu-link">
+              <span class="bar1"></span>
+              <span class="bar2"></span>
+              <span class="bar3"></span>
+            </a>
+          </div>
+          <nav class="nav" id="nav">
+            <ul class="nav__links" id="nav__links">
+              <li class="nav__links-item">
+                <a class="nav__link" onclick="scrollToSection('home')"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav__links-item">
+                <a class="nav__link" onclick="scrollToSection('about')"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav__links-item">
+                <a class="nav__link" onclick="scrollToSection('services')"
+                  >Servicios</a
+                >
+              </li>
+              <li class="nav__links-item">
+                <a class="nav__link" onclick="scrollToSection('gallery')"
+                  >Galeria</a
+                >
+              </li>
+              <li class="nav__links-item">
+                <a class="nav__link" onclick="scrollToSection('faq')"
+                  >Preguntas</a
+                >
+              </li>
+              <li class="nav__links-item">
+                <a class="nav__link" onclick="scrollToSection('contact')"
+                  >Contactanos</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="header__text" id="header__text">
+        <h1 class="header__heading" id="header__heading">
+          Innovación agrícola
+          <img
+            class="header__icon"
+            id="header__icon"
+            src="./images/certificate.svg"
+            alt="Icono certificación"
+          />
+          <span class="header__span-accent" id="header__span-accent"
+            >de alta calidad</span
+          >
+        </h1>
+        <p class="header__paragraph" id="header__paragraph">
+          Somos una iniciativa pionera en la generación de servicios y productos
+          agropecuarios biológicos, de alta calidad y amigables con el
+          ecosistema.
+        </p>
+      </div>
+      <div class="header__images">
+        <div class="header__inner-images">
+          <img
+            class="header__image header__image_1"
+            id="header__image_1"
+            src="./images/header1.jpg"
+            alt="Foto de tomates"
+          />
+          <img
+            class="header__image header__image_2"
+            id="header__image_2"
+            src="./images/header2.jpg"
+            alt="Foto taller Flor de Tierra en Amatitlan"
+          />
+          <img
+            class="header__image header__image_3"
+            id="header__image_3"
+            src="./images/header3.jpeg"
+            alt="Foto de un oveja"
+          />
+          <img
+            class="header__image header__image_4"
+            id="header__image_4"
+            src="./images/header4.jpg"
+            alt="Foto dentro de invernadero de tomate"
+          />
+          <img
+            class="header__image header__image_5"
+            id="header__image_5"
+            src="./images/header5.jpeg"
+            alt="Foto paisaje y cosecha"
+          />
+          <img
+            class="header__image header__image_6"
+            id="header__image_6"
+            src="./images/header6.jpeg"
+            alt="Foto examinando tomate"
+          />
+          <img
+            class="header__image header__image_7"
+            id="header__image_7"
+            src="./images/header7.jpeg"
+            alt="Foto invernadero lleno de tomate"
+          />
+          <img
+            class="header__image header__image_8"
+            id="header__image_8"
+            src="./images/header8.jpeg"
+            alt="Foto de cebollas"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="features" id="home">
+        <div class="features__card features__card_color_blue">
+          <img
+            class="features__image"
+            src="./images/blue-world.svg"
+            alt="World icon"
+          />
+          <h2 class="features__heading">
+            La Agricultura Orgánica en Guatemala
+          </h2>
+          <p class="features__description">
+            Conozca cómo Flor de Tierra está revolucionando la agricultura en
+            Guatemala, ofreciendo productos orgánicos de alta calidad y con
+            impacto positivo en el medio ambiente.
+          </p>
+        </div>
+        <div class="features__card features__card_color_beige">
+          <img
+            class="features__image"
+            src="./images/beige-check.svg"
+            alt="Check icon"
+          />
+          <h2 class="features__heading">Productos Orgánicos Reconocidos</h2>
+          <p class="features__description">
+            Nos sentimos honrados de ser reconocidos por FIDA como los
+            principales innovadores entre los jóvenes rurales en conservación en
+            América Latina y el Caribe.
+          </p>
+        </div>
+        <div class="features__card features__card_color_green">
+          <img
+            class="features__image"
+            src="./images/green-heart.svg"
+            alt="Heart icon"
+          />
+          <h2 class="features__heading">Impactando Vidas y Comunidades</h2>
+          <p class="features__description">
+            Estamos orgullosos de nuestro compromiso de ofrecer productos y
+            servicios agrícolas orgánicos, de alta calidad y respetuosos con el
+            medio ambiente, no solo fomentamos tierras más saludables sino que
+            también contribuimos a las comunidades locales.
+          </p>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <img class="about__image" src="./images/peach.jpg" alt="Peaches" />
+        <div class="about__content">
+          <h2 class="about__heading">Nestra Misión</h2>
+          <p class="about__subheading">Flor de Tierra</p>
+          <p class="about__paragraph">
+            Flor de Tierra es una empresa con fines sociales, que vincula el
+            conocimiento científico y el conocimiento maya en diversas acciones
+            de lucha contra el cambio climático. Buscamos mejorar la
+            productividad, rentabilidad y condiciones de salud de los
+            ecosistemas, sistemas productivos y de los agricultores. Vendemos y
+            enseñamos a elaborar nuestros productos, con la finalidad de
+            transformar la agricultura convencional en una agricultura de amor.
+            Y, nos vinculamos a todo ecosistema que nos permita colaborar para
+            el buen vivir del campo.
+          </p>
+        </div>
+      </section>
+      <section class="services" id="services">
+        <h2 class="services__heading">Servicios de Agricultura Orgánica</h2>
+        <p class="services__paragraph">
+          Conozca nuestros servicios y cómo podemos mejorar su producción de
+          cultivos.
+        </p>
+        <div class="services__container">
+          <div class="services__card">
+            <img
+              class="services__image"
+              src="./images/implements1.jpg"
+              alt="Fertilizer's implements"
+            />
+            <p class="services__card-name">Implementos de calidad</p>
+            <p class="services__card-text">
+              Utilizamos los mejores y más modernos implementos para garantizar
+              una agricultura orgánica de calidad.
+            </p>
+          </div>
+          <div class="services__card">
+            <img
+              class="services__image"
+              src="./images/implements2.jpg"
+              alt="Fertilizer's implements"
+            />
+            <p class="services__card-name">Técnicas y métodos naturales</p>
+            <p class="services__card-text">
+              Nuestra filosofía es trabajar en armonía con la naturaleza,
+              utilizando métodos y técnicas naturales para obtener productos
+              orgánicos.
+            </p>
+          </div>
+          <div class="services__card">
+            <img
+              class="services__image"
+              src="./images/fortalece-tus-suelos.jpeg"
+              alt="Fertilizer"
+            />
+            <p class="services__card-name">Fertilizantes orgánicos</p>
+            <p class="services__card-text">
+              Utilizamos fertilizantes naturales y compost para nutrir nuestros
+              cultivos y obtener productos más saludables y nutritivos.
+            </p>
+          </div>
+        </div>
+        <div class="services__details">
+          <h3 class="services__title services__title_1" id="services__title">
+            Nuestros Productos
+          </h3>
+          <div class="services__item services__item_1">
+            <p class="services__name">Microorganismos de montaña (MM)</p>
+            <p class="services__description">
+              Devuelve la fortaleza al suelo y apura la degradación de residuos
+              sólidos orgánico.
+            </p>
+            <img
+              class="services__item-image"
+              src="./images/services-1.jpeg"
+              alt="Contenedor pequeño de Microorganismos de Montaña MM"
+            />
+          </div>
+          <div class="services__item services__item_2">
+            <p class="services__name">Bokashi</p>
+            <p class="services__description">
+              El mejor fertilizante orgánico de la región con todos los
+              nutrientes necesarios para mejorar la productividad agrícola,
+              respaldado por el conocimiento maya y años de investigación
+              científica.
+            </p>
+            <img
+              class="services__item-image"
+              src="./images/bokashi.jpg"
+              alt="Bokashi Fertilizante"
+            />
+          </div>
+          <div class="services__item services__item_3">
+            <p class="services__name">Bokashi Jardín</p>
+            <p class="services__description">
+              El mejor fertilizante orgánico para agricultura urbana.
+            </p>
+            <img
+              class="services__item-image"
+              src="./images/bokashi-jardin.JPG"
+              alt="Bokashi Jardín"
+            />
+          </div>
+          <div class="services__item services__item_4">
+            <p class="services__name">Ácidos húmicos</p>
+            <p class="services__description">
+              Mejoran la estructura del suelo y la disponibilidad de
+              micronutrientes.
+            </p>
+            <img
+              class="services__item-image"
+              src="./images/acidos-humicos.jpg"
+            />
+          </div>
+          <div class="services__item services__item_5">
+            <p class="services__name">ProbA</p>
+            <p class="services__description">
+              Mejorador del sistema digestivo animal. Mejora en calidad y
+              cantidad la producción animal y reduce el riesgo a diversas
+              enfermedades.
+            </p>
+            <img
+              class="services__item-image"
+              src="./images/probA.jpg"
+              alt="ProbA contenedor pequeño"
+            />
+          </div>
+          <div class="services__item services__item_6">
+            <p class="services__name">Otros</p>
+            <p class="services__description">Gallinas y frutales.</p>
+            <img
+              class="services__item-image"
+              src="./images/gallinas-frutales.jpg"
+              alt="Productos para gallinas y frutales"
+            />
+          </div>
+          <h3 class="services__title services__title_2" id="services__title">
+            Nuestros Servicios
+          </h3>
+          <div class="services__item services__item_7">
+            <p class="services__name">Talleres y cursos</p>
+            <p class="services__description">
+              Agricultura maya sostenible, forestería comunitaria y bioinsumos.
+            </p>
+            <img
+              class="services__item-image"
+              src="./images/servicios1.jpeg"
+              alt="Foto taller de Flor de Tierra"
+            />
+          </div>
+          <div class="services__item services__item_8">
+            <p class="services__name">Montaje de biofábricas</p>
+            <p class="services__description">
+              Diseñamos y construimos biofábricas sostenibles para mejorar la
+              productividad de su cosecha.
+            </p>
+            <img
+              class="services__item-image"
+              src="./images/biofabricas.jpg"
+              alt="Foto biofábricas"
+            />
+          </div>
+          <div class="services__item services__item_9">
+            <p class="services__name">Asesorías silvopastoriles</p>
+            <p class="services__description">
+              Nutrición de ganado vacuno y bovino; fertilización y
+              establecimiento de pastos y forrajes adecuados; y determinación de
+              especies forestales adecuadas para sistemas silvopastoriles.
+            </p>
+            <img
+              class="services__item-image"
+              src="./images/silvopastoral.jpg"
+              alt="Foto de ganado bovino"
+            />
+          </div>
+          <div class="services__item services__item_10">
+            <p class="services__name">Restauración de paisajes</p>
+            <p class="services__description">
+              Métodos de restauración, estrategias de manejo y conservación de
+              paisajes, métodos de gobernanza de paisajes, restauración
+              post-incendios, costo beneficio de la restauración de paisajes.
+            </p>
+            <img
+              class="services__item-image"
+              src="./images/restauración.jpg"
+              alt="Foto planificación de restauración de paisaje"
+            />
+          </div>
+          <div class="services__item services__item_11">
+            <p class="services__name">
+              Estudios relacionados al cambio climático y carbono
+            </p>
+            <p class="services__description">
+              Reducción de incendios forestales, conectividad biológica,
+              medición de biodiversidad, medición de captura de carbono.
+            </p>
+            <img
+              class="services__item-image services__item-image_resized"
+              src="./images/CC.JPG"
+              alt="Imagen mapeo de clima en Guatemala"
+            />
+          </div>
+          <div class="services__item services__item_12">
+            <p class="services__name">Gestión de residuos sólidos</p>
+            <p class="services__description">
+              Diagnósticos situacionales, caracterización de residuos sólidos,
+              métodos de degradación de residuos sólidos orgánicos, mejoramiento
+              del compostaje de residuos sólidos orgánicos.
+            </p>
+            <img
+              class="services__item-image"
+              src="./images/residuos.JPG"
+              alt="Foto gestión de residuos solidos"
+            />
+          </div>
+        </div>
+        <p class="services__text" id="text-container">
+          <span class="services__text_type_fixed">Flor de Tierra es</span>
+          <span
+            class="services__text services__text_type_animated"
+            id="dynamic-text"
+            >Orgánico</span
+          >
+        </p>
+        <div class="services__info">
+          <div class="services__info-container">
+            <p class="services__info-name">
+              Ayudando a los agricultores: cultivando productos más saludables y
+              sostenibles con Flor de Tierra
+            </p>
+            <p class="services__info-text">
+              Con FlorDeTierra, los agricultores pueden obtener productos
+              orgánicos de alta calidad sin químicos ni pesticidas. Esto no solo
+              beneficia su salud, sino también la del ambiente y los
+              consumidores que buscan alimentos más naturales.
+            </p>
+          </div>
+          <img
+            class="services__info-image"
+            src="./images/FdTBigGreenhouse.jpg"
+            alt="Greenhouse's inside photo"
+          />
+        </div>
+        <div class="services__info">
+          <img
+            class="services__info-image"
+            src="./images/FDT-comunityImpact.jpeg"
+            alt="Greenhouse's inside photo"
+          />
+          <div class="services__info-container">
+            <p class="services__info-name">
+              Sea testigo del impacto transformador de la agricultura orgánica
+              en las comunidades guatemaltecas
+            </p>
+            <p class="services__info-text">
+              Nuestro compromiso con la sostenibilidad y la agricultura orgánica
+              fomenta un impacto positivo, conectando la naturaleza con la
+              vibrante vida guatemalteca. Únase a nosotros para ser testigo del
+              poder transformador del cultivo orgánico.
+            </p>
+          </div>
+        </div>
+        <div class="colaborations">
+          <h3 class="colaborations__heading">Nuestras Colaboraciones</h3>
+          <div class="colaborations__container" id="colaborations__container">
+            <div class="colaborations__colab colaborations__colab_n1">
+              <img
+                class="colaborations__image colaborations__image_map"
+                src="./images/colabsMap.png"
+                alt="Mapa de colaboraciones"
+              />
+              <p class="colaborations__text">
+                En Flor de Tierra, creemos en el poder de la colaboración. A
+                través de asociaciones estratégicas con organizaciones en varios
+                países, nuestro objetivo es crear una red global dedicada al
+                avance de la agricultura orgánica. Nuestra misión compartida es
+                mejorar la accesibilidad de los productos orgánicos, fomentar
+                métodos agrícolas respetuosos con el medio ambiente y contribuir
+                a un futuro más saludable y sostenible.
+              </p>
+            </div>
+            <div class="colaborations__colab colaborations__colab_n2">
+              <div class="colaborations__collage colaborations__collage_peru">
+                <img
+                  class="colaborations__image colaborations__image_peru2"
+                  src="./images/peru2.jpeg"
+                  alt="Taller de Flor de Tierra e Perú"
+                />
+                <img
+                  class="colaborations__image colaborations__image_peru1"
+                  src="./images/peru.jpeg"
+                  alt="Taller de Flor de Tierra e Perú"
+                />
+              </div>
+              <div class="colaborations__wrapper">
+                <p class="colaborations__country">PERÚ</p>
+                <p class="colaborations__text">
+                  Taller sobre los principios de la agricultura orgánica,
+                  centrándose en las prácticas regenerativas, la salud del suelo
+                  y la resiliencia climática por Flor de Tierra.
+                </p>
+              </div>
+            </div>
+            <div class="colaborations__colab colaborations__colab_n3">
+              <div class="colaborations__collage colaborations__collage_mexico">
+                <img
+                  class="colaborations__image colaborations__image_mexico1"
+                  src="./images/mexico2.jpeg"
+                  alt="Foto en el Parlamento en Ciudad de México"
+                />
+                <img
+                  class="colaborations__image colaborations__image_mexico2"
+                  src="./images/mexico4.jpg"
+                  alt="Foto en el Parlamento en Ciudad de México"
+                />
+              </div>
+              <div class="colaborations__wrapper">
+                <p class="colaborations__country">MÉXICO</p>
+                <p class="colaborations__text">
+                  7° Encuentro Parlamentario de Cambio Climático en Ciudad de
+                  México. Dimos a conocer las acciones de Flor de Tierra en
+                  torno a los conocimientos ancestrales y la innovación a
+                  diputados senadores de todo el continente americano. ¡Somos la
+                  mejor opción en productos, asesorías y talleres agrícolas
+                  sostenibles!
+                </p>
+              </div>
+            </div>
+            <div class="colaborations__colab colaborations__colab_n4">
+              <div class="colaborations__collage colaborations__collage_roma">
+                <img
+                  class="colaborations__image colaborations__image_roma1"
+                  src="./images/roma.jpeg"
+                  alt="Foto en el Wold Food Forum"
+                />
+                <img
+                  class="colaborations__image colaborations__image_roma2"
+                  src="./images/worldFoodForum2.jpeg"
+                  alt="Foto en el Wold Food Forum"
+                />
+                <img
+                  class="colaborations__image colaborations__image_roma3"
+                  src="./images/worldFoodForum.jpeg"
+                  alt="Foto en el Wold Food Forum"
+                />
+              </div>
+              <div class="colaborations__wrapper">
+                <p class="colaborations__country">ROMA</p>
+                <p class="colaborations__text">
+                  Participamos activamente en el prestigioso Foro Mundial sobre
+                  la Alimentación. Al participar en debates significativos,
+                  contribuímos con nuestros conocimientos al diálogo global
+                  sobre agricultura sostenible. Nuestra presencia en Roma
+                  ejemplifica nuestra dedicación para permanecer a la vanguardia
+                  de conversaciones cruciales que dan forma al futuro de la
+                  agricultura en todo el mundo.
+                </p>
+              </div>
+            </div>
+            <div class="colaborations__colab colaborations__colab_n5">
+              <img
+                class="colaborations__image colaborations__image_panama1"
+                src="./images/panama.jpeg"
+                alt="Foto en VI encuentro Regional Juventudes Rurales"
+              />
+              <div class="colaborations__wrapper">
+                <p class="colaborations__country">PANAMÁ</p>
+                <p class="colaborations__text">
+                  Dimos a conocer a los ministros de agricultura (o delegados)
+                  de Belice 🇧🇿, Guatemala🇬🇹, El Salvador🇸🇻, Honduras 🇭🇳, Costa
+                  Rica🇨🇷, Panamá🇵🇦 y República Dominicana 🇩🇴 y representantes de
+                  CIAT, CAC, Trifinio, FAO, IICA, entre otros; nuestros
+                  productos, servicios y experiencia como alternativa ante la
+                  inminente crisis alimentaria y económica que se avecina por el
+                  aumento excesivo de precios de fertilizantes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="gallery" id="gallery">
+        <div class="gallery__container">
+          <p class="gallery__heading">
+            Descubra la esencia de Flor de Tierra
+            <span class="gallery__span"
+              >capturando la belleza de la armonía orgánica y las prácticas
+              agrícolas prósperas.</span
+            >
+          </p>
+          <div class="gallery-wrap">
+            <div class="gallery__inner-wrapper">
+              <div class="gallery__item gallery__item_1"></div>
+              <div class="gallery__item gallery__item_2"></div>
+              <div class="gallery__item gallery__item_3"></div>
+              <div class="gallery__item gallery__item_4"></div>
+              <div class="gallery__item gallery__item_5"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq" id="faq">
+        <h2 class="faq__heading">Preguntas frecuentes</h2>
+        <p class="faq__paragraph">
+          Preguntas frecuentes sobre agricultura orgánica y cómo Flor de Tierra
+          puede ayudar
+        </p>
+        <div class="faq__container">
+          <div class="faq__card">
+            <p class="faq__question">
+              <img
+                class="faq__icon"
+                src="./images/faqIcon.svg"
+                alt="FAQ Icon"
+              />
+              ¿Qué es agricultura orgánica?
+            </p>
+            <p class="faq__answer">
+              La agricultura orgánica es una forma de producción vegetal que
+              utiliza métodos naturales y sostenibles para cultivar alimentos
+              sin el uso de químicos o pesticidas.
+            </p>
+          </div>
+          <div class="faq__card">
+            <p class="faq__question">
+              <img
+                class="faq__icon"
+                src="./images/faqIcon.svg"
+                alt="FAQ Icon"
+              />
+              ¿Cuáles son los beneficios de la agricultura orgánica?
+            </p>
+            <p class="faq__answer">
+              La agricultura orgánica puede proteger el medio ambiente, mejorar
+              la salud del suelo y producir alimentos más nutritivos y libres de
+              químicos.
+            </p>
+          </div>
+          <div class="faq__card">
+            <p class="faq__question">
+              <img
+                class="faq__icon"
+                src="./images/faqIcon.svg"
+                alt="FAQ Icon"
+              />
+              ¿Cómo puede Flor de Tierra ayudar a la agricultura local?
+            </p>
+            <p class="faq__answer">
+              Flor de Tierra se dedica a la producción de fertilizantes y
+              productos orgánicos y sostenibles en Guatemala, proporcionando a
+              los agricultores locales una opción más saludable y amigable con
+              el medio ambiente.
+            </p>
+          </div>
+          <div class="faq__card">
+            <p class="faq__question">
+              <img
+                class="faq__icon"
+                src="./images/faqIcon.svg"
+                alt="FAQ Icon"
+              />
+              ¿Dónde puedo encontrar los productos de Flor de Tierra?
+            </p>
+            <p class="faq__answer">
+              Los productos de Flor de Tierra están disponibles en tiendas
+              locales y mercados, así como en nuestro sitio web.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <h2 class="contact__heading">Cotiza con Nosotros!</h2>
+        <div class="contact__container">
+          <div class="contact__sub-container">
+            <div class="contact__registration-form">
+              <div class="contact__form-text">
+                <p class="contact__form-heading">Pide una Cotización</p>
+                <p class="contact__form-paragraph">
+                  Completa el siguiente formulario
+                </p>
+              </div>
+              <!--TODO: add a reCAPTCHA key for more security upon website deployment-->
+              <form
+                class="form"
+                action="https://formspree.io/f/mjvnvvgp"
+                method="POST"
+              >
+                <div class="input-section email-section">
+                  <input
+                    class="form__email"
+                    name="email"
+                    type="email"
+                    placeholder="INGRESA TU EMAIL"
+                    autocomplete="off"
+                  />
+                  <div class="animated-button">
+                    <span class="icon-paper-plane"
+                      ><i class="fa fa-envelope-o"></i></span
+                    ><span class="next-button email"
+                      ><i class="fa fa-arrow-up"></i
+                    ></span>
+                  </div>
+                </div>
+                <div class="input-section name-section folded">
+                  <input
+                    class="form__name"
+                    name="name"
+                    type="text"
+                    placeholder="INGRESA TU NOMBRE Y APELLIDO"
+                  />
+                  <div class="animated-button">
+                    <span class="icon-lock"
+                      ><i class="fa fa-user-circle-o"></i></span
+                    ><span class="next-button name"
+                      ><i class="fa fa-paper-plane"></i
+                    ></span>
+                  </div>
+                </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+                <div class="contact__success">
+                  <p>Te contactaremos lo más pronto posible</p>
+                </div>
+              </form>
+            </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+            <div class="contact__divisor">- ó -</div>
+            <div class="contact__social">
+              <p class="contact__social-heading">
+                Puedes contactarnos por medio de nuestras redes sociales
+              </p>
+              <button
+                class="contact__button contact__button_fb"
+                onclick=" window.open('https://www.facebook.com/Flordetierraguate/','_blank')"
+              >
+                <img
+                  class="contact__logo"
+                  src="./images/Cfb.svg"
+                  alt="Facebook logo"
+                />
+                Facebook
+              </button>
+              <button
+                class="contact__button contact__button_ig"
+                onclick=" window.open('https://www.instagram.com/flordetierraguatemala/','_blank')"
+              >
+                <img
+                  class="contact__logo"
+                  src="./images/Cig.svg"
+                  alt="Instagram logo"
+                />
+                Instagram
+              </button>
+              <button
+                class="contact__button contact__button_wp"
+                onclick=" window.open('https://api.whatsapp.com/send?phone=%2B50253385566&data=ARCaVYlDGw0mYKcXjWpYH3ax_sSi8VK4Kz0Yqu5Rx6HoFZD-PmRuTV88HJ9m9lRWstVXP-VkgFG7XxLAhXUhoscUOJqSv0D-KKOhTcRoThRNbHNZ00iInSlU4UvadIQXq9TN9t-28V-EjRJVxAa_v76MFw&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR18dL6k9aeWrLe0hVGow8MmPYeIOc3daEkP5Wg-KbqY-1ruIShobO9DsUM','_blank')"
+              >
+                <img
+                  class="contact__logo"
+                  src="./images/Cwp.svg"
+                  alt="Whatsapp logo"
+                />
+                Whatsapp
+              </button>
+            </div>
+          </div>
+          <div class="contact__gallery"></div>
+        </div>
+      </section>
+    </main>
   </body>
+  <footer class="footer">
+    <div class="footer__social">
+      <div class="footer__wrapper">
+        <img
+          class="footer__icon-location"
+          src="./images/location-icon.svg"
+          alt="Location icon"
+        />
+        <p class="footer__contact">
+          2-40 zona 2, San Pedro Sacatepéquez, San Marcos, Guatemala
+        </p>
+      </div>
+      <div class="footer__wrapper">
+        <img
+          class="footer__icon-phone"
+          src="./images/phone-icon.svg"
+          alt="Phone icon"
+        />
+        <p class="footer__contact">+(502) 4110 7236</p>
+      </div>
+      <div class="footer__wrapper">
+        <img
+          class="footer__icon-mail"
+          src="./images/mail-icon.svg"
+          alt="Mail icon"
+        />
+        <p class="footer__contact">flordetierra.agricola@gmail.com</p>
+      </div>
+      <div class="footer__social-media">
+        <a
+          class="footer__social-icon"
+          href="https://www.facebook.com/Flordetierraguate/"
+          target="_blank"
+        >
+          <img
+            class="footer__facebook"
+            src="./images/fb-icon.svg"
+            alt="Facebook icon"
+          />
+        </a>
+
+        <a
+          class="footer__social-icon header__social-icon_instagram"
+          href="https://www.instagram.com/flordetierraguatemala/"
+          target="_blank"
+        >
+          <img
+            class="footer__instagram"
+            src="./images/ig-icon.svg"
+            alt="Instagram icon"
+          />
+        </a>
+        <a
+          class="footer__social-icon"
+          href="https://api.whatsapp.com/send?phone=%2B50253385566&data=ARCaVYlDGw0mYKcXjWpYH3ax_sSi8VK4Kz0Yqu5Rx6HoFZD-PmRuTV88HJ9m9lRWstVXP-VkgFG7XxLAhXUhoscUOJqSv0D-KKOhTcRoThRNbHNZ00iInSlU4UvadIQXq9TN9t-28V-EjRJVxAa_v76MFw&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR18dL6k9aeWrLe0hVGow8MmPYeIOc3daEkP5Wg-KbqY-1ruIShobO9DsUM"
+          target="_blank"
+        >
+          <img
+            class="footer__whatsapp"
+            src="./images/wp-icon.svg"
+            alt="Whatsapp icon"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <p>
+        &copy; <span id="copyrightYear"></span> Flor de Tierra. Todos los
+        derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+    type="text/javascript"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+  <script src="./script/index.js"></script>
 </html>
