@@ -152,6 +152,11 @@
   align-self: center;
 }
 
+.colaborations__text_map {
+  max-width: 500px;
+  width: 100%;
+}
+
 @media screen and (min-width: 1441px) {
   .colaborations {
     height: 1900px;
