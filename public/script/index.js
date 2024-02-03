@@ -1,3 +1,4 @@
+//Project Logic
 //smooth scrolling function
 /**
  * Scrolls to a section of the webpage with vertical centering.
